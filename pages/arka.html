@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     .arka-hero {
-      padding: 60px 0 100px;
+      padding: calc(var(--header-h) + 60px) 0 100px;
       background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-3) 100%);
       position: relative;
       overflow: hidden;
@@ -769,14 +769,16 @@
       .arka-form { padding: 28px; }
       .arka-section { padding: 72px 0; }
     }
+    @media (max-width: 768px) {
+      .arka-ctabar { display: flex; }
+      body { padding-bottom: 76px; }
+    }
     @media (max-width: 640px) {
       .arka-hero__cta { flex-direction: column; }
       .arka-hero__cta .btn { width: 100%; }
       .arka-form__row { grid-template-columns: 1fr; }
       .arka-gallery { grid-template-columns: 1fr; }
       .arka-specs th, .arka-specs td { padding: 14px 18px; }
-      .arka-ctabar { display: flex; }
-      body { padding-bottom: 76px; }
     }
   </style>
 </head>
@@ -895,7 +897,7 @@
         </div>
         <div class="arka-badge">
           <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          РУ РЗН 2024/24065 · аппарат внесён в <a href="https://gisp.gov.ru" target="_blank" rel="noopener">ГИСП</a>
+          РУ РЗН 2024/24065 · аппарат внесён в <a href="https://gisp.gov.ru/goods/#/product/4727581" target="_blank" rel="noopener">ГИСП</a>
         </div>
       </div>
 
@@ -1138,7 +1140,7 @@
       <div>
         <div class="arka-gisp__title">Внесение в ГИСП</div>
         <div class="arka-gisp__text">Аппарат «АРКА» внесён в Государственную информационную систему промышленности — реестр российской промышленной продукции. Это упрощает применение нацрежима при закупках по 44-ФЗ и 223-ФЗ.</div>
-        <a class="arka-gisp__link" href="https://gisp.gov.ru" target="_blank" rel="noopener">Открыть gisp.gov.ru →</a>
+        <a class="arka-gisp__link" href="https://gisp.gov.ru/goods/#/product/4727581" target="_blank" rel="noopener">Открыть карточку № 4727581 на gisp.gov.ru →</a>
       </div>
     </div>
   </div>
@@ -1253,6 +1255,7 @@
         </div>
         <input type="hidden" name="_subject" value="Заявка на АРКА — МосПоставка">
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" style="display:none">
         <button class="btn btn--gold arka-form__btn" type="submit" id="leadSubmit">Отправить заявку</button>
         <div class="arka-form__status" id="leadStatus"></div>
@@ -1381,15 +1384,18 @@
           body: data,
           headers: { 'Accept': 'application/json' }
         })
-        .then(function(res){ return res.json(); })
-        .then(function(){
-          status.classList.add('is-success');
-          status.textContent = 'Заявка отправлена. Мы свяжемся с вами в течение рабочего дня.';
-          form.reset();
+        .then(function(res){
+          if (res.ok) {
+            status.classList.add('is-success');
+            status.textContent = 'Заявка отправлена. Мы свяжемся с вами в течение рабочего дня.';
+            form.reset();
+          } else {
+            throw new Error('submit failed');
+          }
         })
         .catch(function(){
           status.classList.add('is-error');
-          status.textContent = 'Не удалось отправить. Попробуйте ещё раз или напишите на postavka.mos@yandex.ru.';
+          status.textContent = 'Не удалось отправить. Напишите на postavka.mos@yandex.ru или позвоните: 8 (916) 057-22-22.';
         })
         .finally(function(){
           submit.disabled = false;
