@@ -292,6 +292,10 @@ img { max-width: 100%; display: block; }
   background: radial-gradient(ellipse at 70% 50%, #2a1a06 0%, #1a1004 40%, #0d0802 70%, #0A0E1A 100%);
 }
 
+.slide--plenkin {
+  background: radial-gradient(ellipse at 70% 50%, #0a3040 0%, #062028 40%, #031018 70%, #0A0E1A 100%);
+}
+
 .slide__overlay {
   position: absolute;
   inset: 0;
@@ -675,7 +679,7 @@ img { max-width: 100%; display: block; }
    ============================ */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
