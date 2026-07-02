@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты МосПоставки — оставьте заявку как заказчик или поставщик. Свяжитесь с нами по тендерам, поставкам и партнёрству.">
+  <title>Контакты — МосПоставка</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/img/logo.jpg" alt="МосПоставка" class="logo__img">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="customers.html" class="nav__link">Заказчикам</a>
+      <a href="suppliers.html" class="nav__link">Поставщикам</a>
+      <a href="automation.html" class="nav__link">Автоматизация</a>
+      <a href="products.html" class="nav__link">Продукты</a>
+      <a href="about.html" class="nav__link">О компании</a>
+      <a href="contacts.html" class="nav__link nav__link--cta">Контакты</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page">
+  <div class="container">
+    <div class="page__header">
+      <span class="section__tag">Контакты</span>
+      <h1 class="page__title">Расскажите, какая у вас задача</h1>
+      <p class="page__lead">Закупка, поставка или партнёрство — подберём решение под вашу роль. Заполните форму, и мы свяжемся с вами.</p>
+    </div>
+
+    <div class="page__content" style="max-width: 600px;">
+
+      <div id="customer-form" style="margin-bottom: 80px;">
+        <h3 class="form__title">Заявка от заказчика</h3>
+        <form class="form form__el">
+          <div class="form__group">
+            <label class="form__label" for="c-name">Имя</label>
+            <input class="form__input" id="c-name" type="text" required placeholder="Как к вам обращаться">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="c-org">Организация</label>
+            <input class="form__input" id="c-org" type="text" placeholder="Название организации">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="c-contact">Email или телефон</label>
+            <input class="form__input" id="c-contact" type="text" required placeholder="email@example.ru или +7 (___) ___-__-__">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="c-type">Тип закупки</label>
+            <select class="form__select" id="c-type">
+              <option>44-ФЗ</option>
+              <option>223-ФЗ</option>
+              <option>Коммерческая</option>
+              <option>Не определён</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="c-msg">Что нужно поставить</label>
+            <textarea class="form__textarea" id="c-msg" placeholder="Опишите потребность — оборудование, позиции, объём, сроки"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary form__submit">Отправить заявку</button>
+          <div class="form__success">Спасибо. Заявка отправлена. Мы свяжемся с вами в ближайшее время.</div>
+        </form>
+      </div>
+
+      <div id="supplier-form" style="margin-bottom: 80px;">
+        <h3 class="form__title">Заявка от поставщика</h3>
+        <form class="form form__el">
+          <div class="form__group">
+            <label class="form__label" for="s-name">Имя</label>
+            <input class="form__input" id="s-name" type="text" required placeholder="Как к вам обращаться">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="s-company">Компания</label>
+            <input class="form__input" id="s-company" type="text" required placeholder="Название компании">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="s-role">Роль</label>
+            <select class="form__select" id="s-role">
+              <option>Производитель</option>
+              <option>Дилер</option>
+              <option>Дистрибьютор</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="s-contact">Email или телефон</label>
+            <input class="form__input" id="s-contact" type="text" required placeholder="email@example.ru или +7 (___) ___-__-__">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="s-nomenclature">Номенклатура продукции</label>
+            <textarea class="form__textarea" id="s-nomenclature" placeholder="Какую медицинскую продукцию производите или поставляете"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary form__submit">Отправить заявку</button>
+          <div class="form__success">Спасибо. Заявка отправлена. Мы рассмотрим её и свяжемся с вами.</div>
+        </form>
+      </div>
+
+      <div style="text-align: center; padding: 40px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg);">
+        <h3 style="margin: 0 0 20px; color: var(--color-text); font-size: 1.25rem; font-weight: 600;">Или напишите напрямую</h3>
+        <p style="margin-bottom: 12px;">
+          <a href="mailto:info@mospostavka.ru" style="color: var(--color-gold-2); font-weight: 600; font-size: 1.0625rem;">info@mospostavka.ru</a>
+        </p>
+        <p style="margin-bottom: 12px;">
+          <a href="tel:+74950000000" style="color: var(--color-gold-2); font-weight: 600; font-size: 1.0625rem;">+7 (495) 000-00-00</a>
+        </p>
+        <p style="color: var(--color-text-3); margin: 0;">Москва, Россия</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col footer__brand">
+        <img src="../assets/img/logo.jpg" alt="МосПоставка" class="footer__logo">
+        <p class="footer__desc">Тендерный поставщик под ключ. Платформа проверенных поставщиков и медицинских решений. Единая автоматизация тендеров.</p>
+      </div>
+      <div class="footer__col">
+        <h5 class="footer__heading">Навигация</h5>
+        <ul class="footer__links">
+          <li><a href="customers.html">Заказчикам</a></li>
+          <li><a href="suppliers.html">Поставщикам</a></li>
+          <li><a href="automation.html">Автоматизация</a></li>
+          <li><a href="products.html">Продукты</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5 class="footer__heading">Контакты</h5>
+        <ul class="footer__contacts">
+          <li><a href="mailto:info@mospostavka.ru">info@mospostavka.ru</a></li>
+          <li><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li>Москва, Россия</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5 class="footer__heading">Документы</h5>
+        <ul class="footer__links">
+          <li><a href="#">Реквизиты</a></li>
+          <li><a href="#">Лицензии и сертификаты</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; 2026 МосПоставка. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
