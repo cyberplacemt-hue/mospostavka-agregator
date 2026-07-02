@@ -372,6 +372,16 @@
     }
     .arka-specs td { color: var(--color-text); }
     .arka-specs tr:hover td { background: var(--color-surface-2); }
+    .arka-specs__grp td {
+      background: var(--color-bg-3);
+      color: var(--color-gold-2);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 10px 28px;
+    }
+    .arka-specs__grp:hover td { background: var(--color-bg-3); }
 
     .arka-gallery {
       display: grid;
@@ -881,7 +891,7 @@
         </div>
         <div class="arka-info__group">
           <div class="arka-info__label">Пациенты</div>
-          <div class="arka-info__value">Взрослые пациенты. Использование рассчитано на стандартные антропометрические диапазоны для реанимационных аппаратов данного класса.</div>
+          <div class="arka-info__value">Взрослые и дети, соответствующие параметрам:<br>— высота грудной клетки (в положении лёжа): от 170 до 305 мм<br>— ширина грудной клетки: не более 450 мм</div>
         </div>
         <div class="arka-badge">
           <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -892,47 +902,38 @@
       <div class="arka-accordion" id="arkaAccordion">
         <div class="arka-accordion__item">
           <button class="arka-accordion__head" type="button">
-            Принцип работы
+            Предназначенный пользователь
             <span class="arka-accordion__icon">+</span>
           </button>
           <div class="arka-accordion__body">
-            <div class="arka-accordion__body-inner">Аппарат формирует механические компрессии грудной клетки с заданной глубиной и частотой, синхронизированные с циклом искусственной вентиляции. Параметры соответствуют актуальным рекомендациям по проведению СЛР.</div>
+            <div class="arka-accordion__body-inner">Медицинский персонал, прошедший обучение по проведению сердечно-лёгочной реанимации.</div>
           </div>
         </div>
         <div class="arka-accordion__item">
           <button class="arka-accordion__head" type="button">
-            Режимы работы
+            Условия применения
             <span class="arka-accordion__icon">+</span>
           </button>
           <div class="arka-accordion__body">
-            <div class="arka-accordion__body-inner">Непрерывный массаж с заданным ритмом компрессий и вентиляций. Глубина компрессий поддерживается автоматически и не зависит от усталости оператора.</div>
+            <div class="arka-accordion__body-inner">Оказание медицинской помощи на месте происшествия, в ходе медицинской эвакуации, в лечебных учреждениях.</div>
           </div>
         </div>
         <div class="arka-accordion__item">
           <button class="arka-accordion__head" type="button">
-            Автономность
+            Показания к применению
             <span class="arka-accordion__icon">+</span>
           </button>
           <div class="arka-accordion__body">
-            <div class="arka-accordion__body-inner">До 92 минут работы от встроенного источника питания. Достаточно для транспортировки пациента и работы в ожидании подключения к сети отделения.</div>
+            <div class="arka-accordion__body-inner">Установленное медицинским работником состояние клинической смерти и/или остановки кровообращения, при которых может быть применён непрямой массаж сердца в рамках реанимационных мероприятий.</div>
           </div>
         </div>
         <div class="arka-accordion__item">
           <button class="arka-accordion__head" type="button">
-            Транспортировка и хранение
+            Противопоказания
             <span class="arka-accordion__icon">+</span>
           </button>
           <div class="arka-accordion__body">
-            <div class="arka-accordion__body-inner">Аппарат поставляется в эргономичном рюкзаке, рассчитанном на переноску одним оператором. Компоновка минимизирует люфты при транспортировке.</div>
-          </div>
-        </div>
-        <div class="arka-accordion__item">
-          <button class="arka-accordion__head" type="button">
-            Совместимость
-            <span class="arka-accordion__icon">+</span>
-          </button>
-          <div class="arka-accordion__body">
-            <div class="arka-accordion__body-inner">Рентгенпрозрачная пластина позволяет проводить рентген-контроль без снятия аппарата с пациента. Ручки обеспечивают быстрое позиционирование и фиксацию.</div>
+            <div class="arka-accordion__body-inner">Невозможность правильной установки аппарата на грудной клетке пациента; слишком маленький (высота грудной клетки менее 170 мм) или слишком большой пациент (высота более 305 мм и ширина более 450 мм).</div>
           </div>
         </div>
       </div>
@@ -941,58 +942,70 @@
     <div class="arka-features">
       <div class="arka-feature">
         <div class="arka-feature__num">01</div>
-        <div class="arka-feature__title">92 мин работы</div>
-        <div class="arka-feature__text">Автономная работа от встроенного источника питания для транспортировки и экстренных ситуаций.</div>
+        <div class="arka-feature__title">Не менее 92 минут непрерывной работы</div>
+        <div class="arka-feature__text">Две полностью заряженные батареи с возможностью «горячей замены»; три батареи в комплекте поставки. Одна бригада ведёт СЛР без смены персонала и потери качества компрессий.</div>
       </div>
       <div class="arka-feature">
         <div class="arka-feature__num">02</div>
-        <div class="arka-feature__title">Быстрое позиционирование</div>
-        <div class="arka-feature__text">Установка на пациента за считанные секунды, без сложной настройки перед началом компрессий.</div>
+        <div class="arka-feature__title">Быстрое и точное позиционирование</div>
+        <div class="arka-feature__text">Оптическая система визуализации — позиционирующая подсветка для контроля правильного положения на грудной клетке пациента. Сокращает время от остановки кровообращения до начала эффективных компрессий.</div>
       </div>
       <div class="arka-feature">
         <div class="arka-feature__num">03</div>
-        <div class="arka-feature__title">Постоянство глубины</div>
-        <div class="arka-feature__text">Глубина компрессий поддерживается автоматически на всём протяжении реанимации.</div>
+        <div class="arka-feature__title">Постоянство глубины компрессии</div>
+        <div class="arka-feature__text">Адаптивное управление двигателем: аппарат подстраивает компрессии под ригидность грудной клетки пациента.</div>
       </div>
       <div class="arka-feature">
         <div class="arka-feature__num">04</div>
-        <div class="arka-feature__title">Ручки</div>
-        <div class="arka-feature__text">Эргономичные ручки для переноски и фиксации аппарата при работе с пациентом.</div>
+        <div class="arka-feature__title">Ручки с любым хватом на стойках</div>
+        <div class="arka-feature__text">Прорези в боковых стойках для вертикального или горизонтального хвата с любой стороны — переноска и запуск в труднодоступных местах.</div>
       </div>
       <div class="arka-feature">
         <div class="arka-feature__num">05</div>
-        <div class="arka-feature__title">Рентгенпрозрачная пластина</div>
-        <div class="arka-feature__text">Позволяет проводить рентген-контроль, не снимая аппарат с пациента.</div>
+        <div class="arka-feature__title">Рентгенпрозрачная опорная пластина</div>
+        <div class="arka-feature__text">Композитный материал, не препятствующий рентген-контролю; улавливатели замковых соединений облегчают сочленение со стойками. Позволяет выполнять рентген и КТ без демонтажа аппарата.</div>
       </div>
       <div class="arka-feature">
         <div class="arka-feature__num">06</div>
-        <div class="arka-feature__title">Минимум люфтов</div>
-        <div class="arka-feature__text">Конструкция исключает смещение узлов при транспортировке и работе.</div>
+        <div class="arka-feature__title">Минимум люфтов и шума</div>
+        <div class="arka-feature__text">Замковые соединения оснащены демпферами, снижающими динамические люфты и уровень шума при работе аппарата.</div>
       </div>
       <div class="arka-feature">
         <div class="arka-feature__num">07</div>
-        <div class="arka-feature__title">Эргономичный рюкзак</div>
-        <div class="arka-feature__text">Носимая компоновка для скорой помощи и выездных бригад.</div>
+        <div class="arka-feature__title">Эргономичный рюкзак для переноски</div>
+        <div class="arka-feature__text">Съёмное отделение для хранения электрических комплектующих; возможна переноска ремнём.</div>
       </div>
       <div class="arka-feature">
         <div class="arka-feature__num">08</div>
-        <div class="arka-feature__title">ГИСП</div>
-        <div class="arka-feature__text">Аппарат внесён в Государственный информационный системе пром-торговли.</div>
+        <div class="arka-feature__title">В реестре российской продукции (ГИСП)</div>
+        <div class="arka-feature__text">Аппарат «АРКА» внесён в ГИСП — реестр российской продукции Минпромторга. Проходит по требованиям импортозамещения в закупках по 44-ФЗ и 223-ФЗ.</div>
       </div>
     </div>
 
     <table class="arka-specs">
       <tbody>
-        <tr><th>Тип аппарата</th><td>Автоматический аппарат сердечно-лёгочной реанимации</td></tr>
-        <tr><th>Назначение</th><td>Непрямой массаж сердца и искусственная вентиляция лёгких</td></tr>
-        <tr><th>Пациенты</th><td>Взрослые</td></tr>
-        <tr><th>Время автономной работы</th><td>до 92 мин</td></tr>
-        <tr><th>Режим работы</th><td>Непрерывные компрессии с заданной глубиной и частотой</td></tr>
-        <tr><th>Глубина компрессий</th><td>Поддерживается автоматически</td></tr>
-        <tr><th>Рентгенпрозрачность</th><td>Да, рентгенпрозрачная пластина</td></tr>
-        <tr><th>Транспортировка</th><td>Эргономичный рюкзак, ручки для переноски</td></tr>
-        <tr><th>Регистрационное удостоверение</th><td>РУ РЗН 2024/24065</td></tr>
-        <tr><th>Внесение в ГИСП</th><td>Да</td></tr>
+        <tr class="arka-specs__grp"><td colspan="2">Классификация и коды</td></tr>
+        <tr><th>КТРУ</th><td>32.50.50.190-00000801</td></tr>
+        <tr><th>Код вида</th><td>332390</td></tr>
+        <tr class="arka-specs__grp"><td colspan="2">Пациент и компрессии</td></tr>
+        <tr><th>Высота грудной клетки пациента, мм</th><td>от 170 до 305</td></tr>
+        <tr><th>Ширина грудной клетки пациента, мм</th><td>не более 450</td></tr>
+        <tr><th>Частота компрессий, 1/мин</th><td>105 ± 5</td></tr>
+        <tr><th>Глубина компрессий, мм</th><td>53 ± 3</td></tr>
+        <tr><th>Режимы работы</th><td>30:2, 15:2, непрерывный (CONT)</td></tr>
+        <tr class="arka-specs__grp"><td colspan="2">Питание и автономность</td></tr>
+        <tr><th>Время автономной работы от двух батарей, мин</th><td>не менее 92</td></tr>
+        <tr><th>Горячая замена батареи</th><td>Наличие (3 батареи в комплекте)</td></tr>
+        <tr class="arka-specs__grp"><td colspan="2">Габариты и масса</td></tr>
+        <tr><th>Аппарат в собранном виде, кг</th><td>7,9 ± 20 %</td></tr>
+        <tr><th>Габаритные размеры, мм</th><td>573 × 552 × 240</td></tr>
+        <tr class="arka-specs__grp"><td colspan="2">Защита и срок службы</td></tr>
+        <tr><th>Степень защиты, функционального блока</th><td>IP43</td></tr>
+        <tr><th>Ожидаемый срок службы, лет</th><td>8</td></tr>
+        <tr class="arka-specs__grp"><td colspan="2">Регистрация и статус</td></tr>
+        <tr><th>Регистрационное удостоверение</th><td>РУ РЗН 2024/24065 от 27.01.2025</td></tr>
+        <tr><th>Внесение в ГИСП</th><td>Да, карточка товара № 4727581</td></tr>
+        <tr><th>Товарный знак</th><td>Свидетельство № 1231805</td></tr>
         <tr><th>Производитель</th><td>ООО «МЕДПЛАНТ»</td></tr>
         <tr><th>Поставщик</th><td>МосПоставка — официальный партнёр</td></tr>
       </tbody>
@@ -1155,7 +1168,7 @@
             <span class="arka-accordion__icon">+</span>
           </button>
           <div class="arka-accordion__body">
-            <div class="arka-accordion__body-inner">Подбираем код КТРУ под аппарат сердечно-лёгочной реанимации. Если прямой код отсутствует, формируем описание объекта закупки с привязкой к характеристикам и регистрационному удостоверению.</div>
+            <div class="arka-accordion__body-inner">Для аппарата «АРКА» используется код КТРУ 32.50.50.190-00000801. При необходимости помогаем корректно описать предмет закупки и сформулировать ТЗ.</div>
           </div>
         </div>
         <div class="arka-accordion__item">
