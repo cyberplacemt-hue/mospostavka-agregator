@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Поставляем автоматический аппарат сердечно-лёгочной реанимации «АРКА» в больницы, скорую помощь и частные клиники. Сопровождаем закупку под ключ по 44-ФЗ и 223-ФЗ. Официальный партнёр ООО «МЕДПЛАНТ». РУ РЗН 2024/24065.">
+  <title>АРКА — аппарат сердечно-лёгочной реанимации — МосПоставка</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .arka-hero {
+      padding: 60px 0 100px;
+      background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-3) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .arka-hero__grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .arka-hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-gold-2);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 24px;
+    }
+    .arka-hero__tag::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--color-gold);
+    }
+    .arka-hero__title {
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--color-text);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .arka-hero__subtitle {
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
+      color: var(--color-gold-2);
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+    .arka-hero__lead {
+      font-size: 1.0625rem;
+      color: var(--color-text-2);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+    .arka-hero__points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .arka-hero__point {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 100px;
+      font-size: 0.8125rem;
+      color: var(--color-text);
+    }
+    .arka-hero__point svg {
+      width: 16px; height: 16px;
+      color: var(--color-gold-2);
+      flex-shrink: 0;
+    }
+    .arka-hero__img-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      aspect-ratio: 4 / 3;
+    }
+    .arka-hero__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .arka-hero__cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .arka-section {
+      padding: 100px 0;
+      position: relative;
+    }
+    .arka-section--surface { background: var(--color-bg-2); }
+    .arka-section--accent { background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-3) 100%); }
+    .arka-section__header {
+      max-width: 760px;
+      margin-bottom: 64px;
+    }
+    .arka-section__header--center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .arka-section__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-gold-2);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 20px;
+    }
+    .arka-section__tag::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--color-gold);
+    }
+    .arka-section__title {
+      font-size: clamp(1.875rem, 4vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--color-text);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .arka-section__lead {
+      font-size: 1.125rem;
+      color: var(--color-text-2);
+      line-height: 1.7;
+    }
+
+    .arka-tick-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .arka-tick-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 22px 24px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: 0.9375rem;
+      color: var(--color-text);
+      transition: all var(--transition);
+    }
+    .arka-tick-list li:hover {
+      border-color: var(--color-border-hover);
+      background: var(--color-surface-2);
+    }
+    .arka-tick-list svg {
+      width: 20px; height: 20px;
+      color: var(--color-gold-2);
+      flex-shrink: 0;
+    }
+
+    .arka-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .arka-card {
+      padding: 36px 32px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition);
+    }
+    .arka-card:hover {
+      border-color: var(--color-border-hover);
+      background: var(--color-surface-2);
+      transform: translateY(-2px);
+    }
+    .arka-card__num {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-gold-2);
+      letter-spacing: 0.15em;
+      margin-bottom: 16px;
+    }
+    .arka-card__title {
+      font-size: 1.1875rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+    .arka-card__text {
+      font-size: 0.9375rem;
+      color: var(--color-text-2);
+      line-height: 1.7;
+    }
+
+    .arka-info {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .arka-info__group {
+      margin-bottom: 32px;
+    }
+    .arka-info__label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-gold-2);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+    }
+    .arka-info__value {
+      font-size: 1.0625rem;
+      color: var(--color-text);
+      line-height: 1.7;
+    }
+
+    .arka-accordion {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--color-surface);
+    }
+    .arka-accordion__item {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .arka-accordion__item:last-child { border-bottom: none; }
+    .arka-accordion__head {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 28px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      text-align: left;
+      transition: background var(--transition);
+    }
+    .arka-accordion__head:hover {
+      background: var(--color-surface-2);
+    }
+    .arka-accordion__icon {
+      width: 24px; height: 24px;
+      flex-shrink: 0;
+      color: var(--color-gold-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 300;
+      transition: transform var(--transition);
+    }
+    .arka-accordion__item.is-open .arka-accordion__icon { transform: rotate(45deg); }
+    .arka-accordion__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .arka-accordion__body-inner {
+      padding: 0 28px 24px;
+      font-size: 0.9375rem;
+      color: var(--color-text-2);
+      line-height: 1.8;
+    }
+
+    .arka-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--color-border);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 48px;
+    }
+    .arka-feature {
+      padding: 28px 32px;
+      background: var(--color-surface);
+      transition: background var(--transition);
+    }
+    .arka-feature:hover { background: var(--color-surface-2); }
+    .arka-feature__num {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-gold-2);
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+    }
+    .arka-feature__title {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+    .arka-feature__text {
+      font-size: 0.875rem;
+      color: var(--color-text-2);
+      line-height: 1.6;
+    }
+
+    .arka-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      color: var(--color-text);
+      margin-top: 32px;
+    }
+    .arka-badge svg {
+      width: 18px; height: 18px;
+      color: var(--color-gold-2);
+      flex-shrink: 0;
+    }
+    .arka-badge a {
+      color: var(--color-gold-2);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .arka-specs {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 48px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--color-surface);
+    }
+    .arka-specs th, .arka-specs td {
+      padding: 18px 28px;
+      text-align: left;
+      font-size: 0.9375rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .arka-specs tr:last-child th,
+    .arka-specs tr:last-child td { border-bottom: none; }
+    .arka-specs th {
+      color: var(--color-text-2);
+      font-weight: 500;
+      width: 45%;
+      background: var(--color-bg-2);
+    }
+    .arka-specs td { color: var(--color-text); }
+    .arka-specs tr:hover td { background: var(--color-surface-2); }
+
+    .arka-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .arka-gallery__item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .arka-gallery__item:hover {
+      border-color: var(--color-border-hover);
+      transform: translateY(-2px);
+    }
+    .arka-gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .arka-gallery__item:hover img { transform: scale(1.04); }
+
+    .arka-lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 14, 26, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 40px;
+    }
+    .arka-lightbox.is-open { display: flex; }
+    .arka-lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border-hover);
+    }
+    .arka-lightbox__close {
+      position: absolute;
+      top: 24px; right: 24px;
+      width: 44px; height: 44px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-hover);
+      border-radius: 50%;
+      color: var(--color-text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arka-videos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .arka-video {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+    }
+    .arka-video video {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #000;
+    }
+    .arka-video__title {
+      padding: 20px 24px;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-text);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .arka-formats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .arka-format {
+      padding: 36px 32px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition);
+    }
+    .arka-format:hover {
+      border-color: var(--color-border-hover);
+      background: var(--color-surface-2);
+      transform: translateY(-2px);
+    }
+    .arka-format__title {
+      font-size: 1.1875rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+    .arka-format__text {
+      font-size: 0.9375rem;
+      color: var(--color-text-2);
+      line-height: 1.7;
+    }
+
+    .arka-docs-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 48px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .arka-docs-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 22px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: 0.9375rem;
+      color: var(--color-text);
+    }
+    .arka-docs-list svg {
+      width: 20px; height: 20px;
+      color: var(--color-gold-2);
+      flex-shrink: 0;
+    }
+
+    .arka-proofs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .arka-proof {
+      padding: 24px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition);
+      text-align: center;
+    }
+    .arka-proof:hover {
+      border-color: var(--color-border-hover);
+      background: var(--color-surface-2);
+      transform: translateY(-2px);
+    }
+    .arka-proof__icon {
+      width: 44px; height: 44px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-bg-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      color: var(--color-gold-2);
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+    .arka-proof__title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+    .arka-proof__text {
+      font-size: 0.8125rem;
+      color: var(--color-text-3);
+      margin-bottom: 16px;
+    }
+    .arka-proof__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-gold-2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+    .arka-proof__link:hover { color: var(--color-text); }
+
+    .arka-gisp {
+      margin-top: 32px;
+      padding: 32px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .arka-gisp__img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+    .arka-gisp__img img {
+      width: 100%;
+      display: block;
+    }
+    .arka-gisp__title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+    .arka-gisp__text {
+      font-size: 0.9375rem;
+      color: var(--color-text-2);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .arka-gisp__link {
+      color: var(--color-gold-2);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .arka-faq {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .arka-contact {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .arka-contact__info {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .arka-contact__item {
+      padding: 24px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+    }
+    .arka-contact__label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-gold-2);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 10px;
+    }
+    .arka-contact__value {
+      font-size: 1.0625rem;
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    .arka-contact__value a {
+      color: var(--color-text);
+      text-decoration: none;
+    }
+    .arka-contact__value a:hover { color: var(--color-gold-2); }
+
+    .arka-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 40px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+    .arka-form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .arka-form__field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .arka-form__label {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--color-text-2);
+    }
+    .arka-form__input,
+    .arka-form__textarea {
+      padding: 14px 18px;
+      background: var(--color-bg-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      color: var(--color-text);
+      font-size: 0.9375rem;
+      font-family: var(--font);
+      transition: border-color var(--transition);
+    }
+    .arka-form__input:focus,
+    .arka-form__textarea:focus {
+      outline: none;
+      border-color: var(--color-gold-2);
+    }
+    .arka-form__textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .arka-form__btn {
+      width: 100%;
+      margin-top: 8px;
+    }
+    .arka-form__status {
+      font-size: 0.875rem;
+      text-align: center;
+      padding: 12px;
+      border-radius: var(--radius);
+      display: none;
+    }
+    .arka-form__status.is-success {
+      display: block;
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--color-success);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .arka-form__status.is-error {
+      display: block;
+      background: rgba(239, 68, 68, 0.12);
+      color: #EF4444;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .arka-disclaimer {
+      padding: 60px 0;
+      background: var(--color-bg);
+      border-top: 1px solid var(--color-border);
+    }
+    .arka-disclaimer p {
+      font-size: 0.8125rem;
+      color: var(--color-text-3);
+      line-height: 1.7;
+      max-width: 760px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .arka-ctabar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border-hover);
+      padding: 14px 20px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      z-index: 1000;
+      box-shadow: 0 -8px 24px rgba(0,0,0,0.4);
+    }
+    .arka-ctabar__btn {
+      flex: 1;
+      max-width: 320px;
+    }
+
+    @media (max-width: 960px) {
+      .arka-hero__grid { grid-template-columns: 1fr; gap: 40px; }
+      .arka-info { grid-template-columns: 1fr; gap: 40px; }
+      .arka-features { grid-template-columns: 1fr; }
+      .arka-gallery { grid-template-columns: repeat(2, 1fr); }
+      .arka-videos { grid-template-columns: 1fr; }
+      .arka-contact { grid-template-columns: 1fr; gap: 40px; }
+      .arka-gisp { grid-template-columns: 1fr; }
+      .arka-form { padding: 28px; }
+      .arka-section { padding: 72px 0; }
+    }
+    @media (max-width: 640px) {
+      .arka-hero__cta { flex-direction: column; }
+      .arka-hero__cta .btn { width: 100%; }
+      .arka-form__row { grid-template-columns: 1fr; }
+      .arka-gallery { grid-template-columns: 1fr; }
+      .arka-specs th, .arka-specs td { padding: 14px 18px; }
+      .arka-ctabar { display: flex; }
+      body { padding-bottom: 76px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/img/logo.jpg" alt="МосПоставка" class="logo__img">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="customers.html" class="nav__link">Заказчикам</a>
+      <a href="suppliers.html" class="nav__link">Поставщикам</a>
+      <a href="automation.html" class="nav__link">Автоматизация</a>
+      <a href="products.html" class="nav__link">Продукты</a>
+      <a href="about.html" class="nav__link">О компании</a>
+      <a href="contacts.html" class="nav__link nav__link--cta">Контакты</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="arka-hero">
+  <div class="container">
+    <div class="arka-hero__grid">
+      <div class="arka-hero__content">
+        <span class="arka-hero__tag">Медицинское оборудование · Реанимация</span>
+        <h1 class="arka-hero__title">Автоматический аппарат сердечно-лёгочной реанимации «АРКА»</h1>
+        <p class="arka-hero__subtitle">с тендерным сопровождением под ключ</p>
+        <p class="arka-hero__lead">«АРКА» — российский аппарат для непрямого массажа сердца и искусственной вентиляции лёгких. Подаём в больницы, скорую помощь и частные клиники через 44-ФЗ, 223-ФЗ и коммерческие закупки. Сопровождаем поставку, документооборот и обучение.</p>
+        <div class="arka-hero__points">
+          <span class="arka-hero__point"><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>РУ РЗН 2024/24065</span>
+          <span class="arka-hero__point"><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Внесён в ГИСП</span>
+          <span class="arka-hero__point"><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Госконтракты 44-ФЗ / 223-ФЗ</span>
+        </div>
+        <div class="arka-hero__cta">
+          <a href="#contact" class="btn btn--gold btn--large">Запросить персональную цену</a>
+          <a href="#device" class="btn btn--ghost btn--large">Характеристики</a>
+        </div>
+      </div>
+      <div class="arka-hero__img-wrap">
+        <img src="../assets/arka/arka-1.jpg" alt="Аппарат АРКА">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="arka-section" id="audience">
+  <div class="container">
+    <div class="arka-section__header">
+      <span class="arka-section__tag">Кому нужен</span>
+      <h2 class="arka-section__title">Где применяется «АРКА»</h2>
+      <p class="arka-section__lead">Аппарат закрывает задачу проведения непрямого массажа сердца и ИВЛ в экстренных ситуациях. Поставляем в учреждения любого профиля и формы собственности.</p>
+    </div>
+    <ul class="arka-tick-list">
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Скорая помощь</li>
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Анестезиология и реанимация</li>
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Кардиохирургия</li>
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Частные клиники</li>
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Учебные центры</li>
+    </ul>
+  </div>
+</section>
+
+<section class="arka-section arka-section--surface" id="why">
+  <div class="container">
+    <div class="arka-section__header">
+      <span class="arka-section__tag">Почему выгодно покупать у нас</span>
+      <h2 class="arka-section__title">МосПоставка — тендерный канал для «АРКА»</h2>
+      <p class="arka-section__lead">Мы отвечаем за закупку целиком: от заявки до подписи в накладной. Заказчик работает с одним контрагентом, а не с цепочкой посредников.</p>
+    </div>
+    <div class="arka-cards">
+      <div class="arka-card">
+        <div class="arka-card__num">01</div>
+        <div class="arka-card__title">Практика 44-ФЗ и 223-ФЗ</div>
+        <div class="arka-card__text">Проводили аппараты через электронные процедуры обоих законов. Знаем нацрежим, КТРУ, обоснование НМЦК и пакет документов для участия.</div>
+      </div>
+      <div class="arka-card">
+        <div class="arka-card__num">02</div>
+        <div class="arka-card__title">Официальный партнёр ООО «МЕДПЛАНТ»</div>
+        <div class="arka-card__text">Работаем напрямую с производителем. Аппарат поставляется с оригинальной документацией, РУ и РЭ, без «серых» каналов и переплат.</div>
+      </div>
+      <div class="arka-card">
+        <div class="arka-card__num">03</div>
+        <div class="arka-card__title">Ответственность за результат</div>
+        <div class="arka-card__text">Берём на себя исполнение: сроки, комплектность, приёмку. Если что-то идёт не по плану — решаем за свой счёт, а не перекладываем на заказчика.</div>
+      </div>
+      <div class="arka-card">
+        <div class="arka-card__num">04</div>
+        <div class="arka-card__title">Работаем по всей России</div>
+        <div class="arka-card__text">Доставка в любой регион, согласование с региональными складами и таможней. Логистику выстраиваем под график приёмки учреждения.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="arka-section arka-section--accent" id="device">
+  <div class="container">
+    <div class="arka-section__header">
+      <span class="arka-section__tag">Аппарат</span>
+      <h2 class="arka-section__title">Характеристики и возможности</h2>
+      <p class="arka-section__lead">«АРКА» построен как носимый аппарат для экстренной реанимации: автономная работа, постоянство глубины компрессий и совместимость со стандартным оборудованием отделения.</p>
+    </div>
+
+    <div class="arka-info">
+      <div>
+        <div class="arka-info__group">
+          <div class="arka-info__label">Область применения</div>
+          <div class="arka-info__value">Проведение непрямого массажа сердца и искусственной вентиляции лёгких у взрослых в экстренных ситуациях вне стационара и в условиях отделения.</div>
+        </div>
+        <div class="arka-info__group">
+          <div class="arka-info__label">Пациенты</div>
+          <div class="arka-info__value">Взрослые пациенты. Использование рассчитано на стандартные антропометрические диапазоны для реанимационных аппаратов данного класса.</div>
+        </div>
+        <div class="arka-badge">
+          <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          РУ РЗН 2024/24065 · аппарат внесён в <a href="https://gisp.gov.ru" target="_blank" rel="noopener">ГИСП</a>
+        </div>
+      </div>
+
+      <div class="arka-accordion" id="arkaAccordion">
+        <div class="arka-accordion__item">
+          <button class="arka-accordion__head" type="button">
+            Принцип работы
+            <span class="arka-accordion__icon">+</span>
+          </button>
+          <div class="arka-accordion__body">
+            <div class="arka-accordion__body-inner">Аппарат формирует механические компрессии грудной клетки с заданной глубиной и частотой, синхронизированные с циклом искусственной вентиляции. Параметры соответствуют актуальным рекомендациям по проведению СЛР.</div>
+          </div>
+        </div>
+        <div class="arka-accordion__item">
+          <button class="arka-accordion__head" type="button">
+            Режимы работы
+            <span class="arka-accordion__icon">+</span>
+          </button>
+          <div class="arka-accordion__body">
+            <div class="arka-accordion__body-inner">Непрерывный массаж с заданным ритмом компрессий и вентиляций. Глубина компрессий поддерживается автоматически и не зависит от усталости оператора.</div>
+          </div>
+        </div>
+        <div class="arka-accordion__item">
+          <button class="arka-accordion__head" type="button">
+            Автономность
+            <span class="arka-accordion__icon">+</span>
+          </button>
+          <div class="arka-accordion__body">
+            <div class="arka-accordion__body-inner">До 92 минут работы от встроенного источника питания. Достаточно для транспортировки пациента и работы в ожидании подключения к сети отделения.</div>
+          </div>
+        </div>
+        <div class="arka-accordion__item">
+          <button class="arka-accordion__head" type="button">
+            Транспортировка и хранение
+            <span class="arka-accordion__icon">+</span>
+          </button>
+          <div class="arka-accordion__body">
+            <div class="arka-accordion__body-inner">Аппарат поставляется в эргономичном рюкзаке, рассчитанном на переноску одним оператором. Компоновка минимизирует люфты при транспортировке.</div>
+          </div>
+        </div>
+        <div class="arka-accordion__item">
+          <button class="arka-accordion__head" type="button">
+            Совместимость
+            <span class="arka-accordion__icon">+</span>
+          </button>
+          <div class="arka-accordion__body">
+            <div class="arka-accordion__body-inner">Рентгенпрозрачная пластина позволяет проводить рентген-контроль без снятия аппарата с пациента. Ручки обеспечивают быстрое позиционирование и фиксацию.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arka-features">
+      <div class="arka-feature">
+        <div class="arka-feature__num">01</div>
+        <div class="arka-feature__title">92 мин работы</div>
+        <div class="arka-feature__text">Автономная работа от встроенного источника питания для транспортировки и экстренных ситуаций.</div>
+      </div>
+      <div class="arka-feature">
+        <div class="arka-feature__num">02</div>
+        <div class="arka-feature__title">Быстрое позиционирование</div>
+        <div class="arka-feature__text">Установка на пациента за считанные секунды, без сложной настройки перед началом компрессий.</div>
+      </div>
+      <div class="arka-feature">
+        <div class="arka-feature__num">03</div>
+        <div class="arka-feature__title">Постоянство глубины</div>
+        <div class="arka-feature__text">Глубина компрессий поддерживается автоматически на всём протяжении реанимации.</div>
+      </div>
+      <div class="arka-feature">
+        <div class="arka-feature__num">04</div>
+        <div class="arka-feature__title">Ручки</div>
+        <div class="arka-feature__text">Эргономичные ручки для переноски и фиксации аппарата при работе с пациентом.</div>
+      </div>
+      <div class="arka-feature">
+        <div class="arka-feature__num">05</div>
+        <div class="arka-feature__title">Рентгенпрозрачная пластина</div>
+        <div class="arka-feature__text">Позволяет проводить рентген-контроль, не снимая аппарат с пациента.</div>
+      </div>
+      <div class="arka-feature">
+        <div class="arka-feature__num">06</div>
+        <div class="arka-feature__title">Минимум люфтов</div>
+        <div class="arka-feature__text">Конструкция исключает смещение узлов при транспортировке и работе.</div>
+      </div>
+      <div class="arka-feature">
+        <div class="arka-feature__num">07</div>
+        <div class="arka-feature__title">Эргономичный рюкзак</div>
+        <div class="arka-feature__text">Носимая компоновка для скорой помощи и выездных бригад.</div>
+      </div>
+      <div class="arka-feature">
+        <div class="arka-feature__num">08</div>
+        <div class="arka-feature__title">ГИСП</div>
+        <div class="arka-feature__text">Аппарат внесён в Государственный информационный системе пром-торговли.</div>
+      </div>
+    </div>
+
+    <table class="arka-specs">
+      <tbody>
+        <tr><th>Тип аппарата</th><td>Автоматический аппарат сердечно-лёгочной реанимации</td></tr>
+        <tr><th>Назначение</th><td>Непрямой массаж сердца и искусственная вентиляция лёгких</td></tr>
+        <tr><th>Пациенты</th><td>Взрослые</td></tr>
+        <tr><th>Время автономной работы</th><td>до 92 мин</td></tr>
+        <tr><th>Режим работы</th><td>Непрерывные компрессии с заданной глубиной и частотой</td></tr>
+        <tr><th>Глубина компрессий</th><td>Поддерживается автоматически</td></tr>
+        <tr><th>Рентгенпрозрачность</th><td>Да, рентгенпрозрачная пластина</td></tr>
+        <tr><th>Транспортировка</th><td>Эргономичный рюкзак, ручки для переноски</td></tr>
+        <tr><th>Регистрационное удостоверение</th><td>РУ РЗН 2024/24065</td></tr>
+        <tr><th>Внесение в ГИСП</th><td>Да</td></tr>
+        <tr><th>Производитель</th><td>ООО «МЕДПЛАНТ»</td></tr>
+        <tr><th>Поставщик</th><td>МосПоставка — официальный партнёр</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="arka-section arka-section--surface" id="media">
+  <div class="container">
+    <div class="arka-section__header">
+      <span class="arka-section__tag">Галерея</span>
+      <h2 class="arka-section__title">Фото и видео</h2>
+      <p class="arka-section__lead">Фотографии аппарата, комплектации и применения. Видео — распаковка и демонстрация работы.</p>
+    </div>
+
+    <div class="arka-gallery" id="arkaGallery">
+      <div class="arka-gallery__item" data-full="../assets/arka/arka-1.jpg"><img src="../assets/arka/arka-1.jpg" alt="АРКА — фото 1"></div>
+      <div class="arka-gallery__item" data-full="../assets/arka/arka-2.jpg"><img src="../assets/arka/arka-2.jpg" alt="АРКА — фото 2"></div>
+      <div class="arka-gallery__item" data-full="../assets/arka/arka-3.jpg"><img src="../assets/arka/arka-3.jpg" alt="АРКА — фото 3"></div>
+      <div class="arka-gallery__item" data-full="../assets/arka/arka-4.jpg"><img src="../assets/arka/arka-4.jpg" alt="АРКА — фото 4"></div>
+      <div class="arka-gallery__item" data-full="../assets/arka/arka-5.jpg"><img src="../assets/arka/arka-5.jpg" alt="АРКА — фото 5"></div>
+      <div class="arka-gallery__item" data-full="../assets/arka/arka-6.jpg"><img src="../assets/arka/arka-6.jpg" alt="АРКА — фото 6"></div>
+      <div class="arka-gallery__item" data-full="../assets/arka/arka-7.jpg"><img src="../assets/arka/arka-7.jpg" alt="АРКА — фото 7"></div>
+      <div class="arka-gallery__item" data-full="../assets/arka/arka-8.jpg"><img src="../assets/arka/arka-8.jpg" alt="АРКА — фото 8"></div>
+      <div class="arka-gallery__item" data-full="../assets/arka/arka-9.jpg"><img src="../assets/arka/arka-9.jpg" alt="АРКА — фото 9"></div>
+    </div>
+
+    <div class="arka-videos">
+      <div class="arka-video">
+        <video src="../assets/arka/arka-unpacking.mp4" controls preload="metadata"></video>
+        <div class="arka-video__title">Распаковка</div>
+      </div>
+      <div class="arka-video">
+        <video src="../assets/arka/arka-application.mp4" controls preload="metadata"></video>
+        <div class="arka-video__title">Применение</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="arka-lightbox" id="arkaLightbox">
+  <button class="arka-lightbox__close" id="arkaLightboxClose" aria-label="Закрыть">&times;</button>
+  <img src="" alt="" id="arkaLightboxImg">
+</div>
+
+<section class="arka-section" id="formats">
+  <div class="container">
+    <div class="arka-section__header">
+      <span class="arka-section__tag">Форматы работы</span>
+      <h2 class="arka-section__title">Как мы поставляем «АРКА»</h2>
+      <p class="arka-section__lead">Подбираем формат под тип закупки и профиль учреждения. В каждом случае — полное сопровождение и оригинальная документация.</p>
+    </div>
+    <div class="arka-formats">
+      <div class="arka-format">
+        <div class="arka-format__title">Госконтракт (44-ФЗ, 223-ФЗ)</div>
+        <div class="arka-format__text">Участие в электронных процедурах, обеспечение заявок, исполнение по графику. Готовим пакет под нацрежим и КТРУ, отслеживаем приёмку.</div>
+      </div>
+      <div class="arka-format">
+        <div class="arka-format__title">Коммерческий договор</div>
+        <div class="arka-format__text">Прямая поставка по договору с частной клиникой или сетью. Согласуем спецификацию, сроки и порядок оплаты без участия электронных площадок.</div>
+      </div>
+      <div class="arka-format">
+        <div class="arka-format__title">Пилотный запуск</div>
+        <div class="arka-format__text">Для учебных центров и клиник, оценивающих аппарат: демонстрация, обучение персонала и формирование заявки на серийную поставку.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="arka-section arka-section--surface" id="docs">
+  <div class="container">
+    <div class="arka-section__header">
+      <span class="arka-section__tag">Документы</span>
+      <h2 class="arka-section__title">Подтверждённая документация</h2>
+      <p class="arka-section__lead">Полный пакет прилагается к каждой поставке. Ниже — публичные документы и краткие материалы для закупки.</p>
+    </div>
+
+    <ul class="arka-docs-list">
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Регистрационное удостоверение РЗН</li>
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Руководство по эксплуатации</li>
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Технические условия / ТМ</li>
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Внесение в ГИСП</li>
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Краткое описание для закупки</li>
+      <li><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Презентация продукта</li>
+    </ul>
+
+    <div class="arka-proofs">
+      <div class="arka-proof">
+        <div class="arka-proof__icon">РУ</div>
+        <div class="arka-proof__title">Регистрационное удостоверение</div>
+        <div class="arka-proof__text">РУ РЗН 2024/24065</div>
+        <a class="arka-proof__link" href="../assets/arka/ru-arka.pdf" target="_blank">Скачать PDF →</a>
+      </div>
+      <div class="arka-proof">
+        <div class="arka-proof__icon">РЭ</div>
+        <div class="arka-proof__title">Руководство по эксплуатации</div>
+        <div class="arka-proof__text">Полное РЭ аппарата</div>
+        <a class="arka-proof__link" href="../assets/arka/re-arka.pdf" target="_blank">Скачать PDF →</a>
+      </div>
+      <div class="arka-proof">
+        <div class="arka-proof__icon">ТМ</div>
+        <div class="arka-proof__title">Технические условия</div>
+        <div class="arka-proof__text">ТМ производителя</div>
+        <a class="arka-proof__link" href="../assets/arka/tm-arka.pdf" target="_blank">Скачать PDF →</a>
+      </div>
+      <div class="arka-proof">
+        <div class="arka-proof__icon">01</div>
+        <div class="arka-proof__title">Краткое описание</div>
+        <div class="arka-proof__text">Листовка с характеристиками</div>
+        <a class="arka-proof__link" href="../assets/arka/leaflet-arka.pdf" target="_blank">Скачать PDF →</a>
+      </div>
+      <div class="arka-proof">
+        <div class="arka-proof__icon">02</div>
+        <div class="arka-proof__title">Описание для закупки</div>
+        <div class="arka-proof__text">Материал для НМЦК и заявки</div>
+        <a class="arka-proof__link" href="../assets/arka/flyer-arka.pdf" target="_blank">Скачать PDF →</a>
+      </div>
+      <div class="arka-proof">
+        <div class="arka-proof__icon">03</div>
+        <div class="arka-proof__title">Презентация</div>
+        <div class="arka-proof__text">Полная презентация продукта</div>
+        <a class="arka-proof__link" href="../assets/arka/presentation-arka.pdf" target="_blank">Скачать PDF →</a>
+      </div>
+    </div>
+
+    <div class="arka-gisp">
+      <div class="arka-gisp__img">
+        <img src="../assets/arka/gisp.jpg" alt="АРКА в ГИСП">
+      </div>
+      <div>
+        <div class="arka-gisp__title">Внесение в ГИСП</div>
+        <div class="arka-gisp__text">Аппарат «АРКА» внесён в Государственную информационную систему промышленности — реестр российской промышленной продукции. Это упрощает применение нацрежима при закупках по 44-ФЗ и 223-ФЗ.</div>
+        <a class="arka-gisp__link" href="https://gisp.gov.ru" target="_blank" rel="noopener">Открыть gisp.gov.ru →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="arka-section" id="faq">
+  <div class="container">
+    <div class="arka-section__header arka-section__header--center">
+      <span class="arka-section__tag">FAQ</span>
+      <h2 class="arka-section__title">Частые вопросы по закупке</h2>
+      <p class="arka-section__lead">Коротко о ключевых моментах, которые возникают при выводе «АРКА» в тендер.</p>
+    </div>
+    <div class="arka-faq">
+      <div class="arka-accordion" id="arkaFaq">
+        <div class="arka-accordion__item">
+          <button class="arka-accordion__head" type="button">
+            Подходит ли аппарат под нацрежим?
+            <span class="arka-accordion__icon">+</span>
+          </button>
+          <div class="arka-accordion__body">
+            <div class="arka-accordion__body-inner">Да. «АРКА» — российское изделие, внесённое в ГИСП, что подтверждает применение национального режима при закупках по 44-ФЗ и 223-ФЗ. Пакет подтверждений прилагаем к заявке.</div>
+          </div>
+        </div>
+        <div class="arka-accordion__item">
+          <button class="arka-accordion__head" type="button">
+            Есть ли позиция в КТРУ?
+            <span class="arka-accordion__icon">+</span>
+          </button>
+          <div class="arka-accordion__body">
+            <div class="arka-accordion__body-inner">Подбираем код КТРУ под аппарат сердечно-лёгочной реанимации. Если прямой код отсутствует, формируем описание объекта закупки с привязкой к характеристикам и регистрационному удостоверению.</div>
+          </div>
+        </div>
+        <div class="arka-accordion__item">
+          <button class="arka-accordion__head" type="button">
+            Какой срок поставки?
+            <span class="arka-accordion__icon">+</span>
+          </button>
+          <div class="arka-accordion__body">
+            <div class="arka-accordion__body-inner">Срок зависит от региона и наличия на складе. По Москве и центральному региону — от нескольких дней, по регионам — согласуем график логистики под дату приёмки учреждения.</div>
+          </div>
+        </div>
+        <div class="arka-accordion__item">
+          <button class="arka-accordion__head" type="button">
+            Предусмотрено ли обучение?
+            <span class="arka-accordion__icon">+</span>
+          </button>
+          <div class="arka-accordion__body">
+            <div class="arka-accordion__body-inner">Да. По согласованию проводим обучение персонала и пилотный запуск, особенно для учебных центров и клиник, впервые внедряющих аппарат в практику.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="arka-section arka-section--accent" id="contact">
+  <div class="container">
+    <div class="arka-section__header">
+      <span class="arka-section__tag">Контакты</span>
+      <h2 class="arka-section__title">Запросить цену и спецификацию</h2>
+      <p class="arka-section__lead">Оставьте заявку — пришлём персональное предложение, пакет документов и график поставки. Отвечаем в течение рабочего дня.</p>
+    </div>
+
+    <div class="arka-contact">
+      <div class="arka-contact__info">
+        <div class="arka-contact__item">
+          <div class="arka-contact__label">Телефон</div>
+          <div class="arka-contact__value"><a href="tel:+79160572222">8 (916) 057-22-22</a></div>
+        </div>
+        <div class="arka-contact__item">
+          <div class="arka-contact__label">Email</div>
+          <div class="arka-contact__value"><a href="mailto:postavka.mos@yandex.ru">postavka.mos@yandex.ru</a></div>
+        </div>
+        <div class="arka-contact__item">
+          <div class="arka-contact__label">География</div>
+          <div class="arka-contact__value">По всей России</div>
+        </div>
+        <div class="arka-contact__item">
+          <div class="arka-contact__label">Режим работы</div>
+          <div class="arka-contact__value">Пн–Пт 9:00–18:00 МСК</div>
+        </div>
+      </div>
+
+      <form class="arka-form" id="leadForm" action="https://formsubmit.co/postavka.mos@yandex.ru" method="POST">
+        <div class="arka-form__row">
+          <div class="arka-form__field">
+            <label class="arka-form__label" for="lf-name">Имя</label>
+            <input class="arka-form__input" type="text" id="lf-name" name="name" required>
+          </div>
+          <div class="arka-form__field">
+            <label class="arka-form__label" for="lf-org">Организация</label>
+            <input class="arka-form__input" type="text" id="lf-org" name="org">
+          </div>
+        </div>
+        <div class="arka-form__row">
+          <div class="arka-form__field">
+            <label class="arka-form__label" for="lf-city">Город</label>
+            <input class="arka-form__input" type="text" id="lf-city" name="city">
+          </div>
+          <div class="arka-form__field">
+            <label class="arka-form__label" for="lf-phone">Телефон</label>
+            <input class="arka-form__input" type="tel" id="lf-phone" name="phone" required>
+          </div>
+        </div>
+        <div class="arka-form__field">
+          <label class="arka-form__label" for="lf-email">Email</label>
+          <input class="arka-form__input" type="email" id="lf-email" name="email" required>
+        </div>
+        <div class="arka-form__field">
+          <label class="arka-form__label" for="lf-msg">Сообщение</label>
+          <textarea class="arka-form__textarea" id="lf-msg" name="msg" rows="4"></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="Заявка на АРКА — МосПоставка">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
+        <button class="btn btn--gold arka-form__btn" type="submit" id="leadSubmit">Отправить заявку</button>
+        <div class="arka-form__status" id="leadStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="arka-disclaimer">
+  <div class="container">
+    <p>Информация на странице носит ознакомительный характер и не является публичной офертой. Технические характеристики, комплектация и стоимость уточняются при формировании коммерческого предложения. Все товарные знаки принадлежат их правообладателям.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col footer__brand">
+        <img src="../assets/img/logo.jpg" alt="МосПоставка" class="footer__logo">
+        <p class="footer__desc">Тендерный поставщик под ключ. Платформа проверенных поставщиков и медицинских решений. Единая автоматизация тендеров.</p>
+      </div>
+      <div class="footer__col">
+        <h5 class="footer__heading">Навигация</h5>
+        <ul class="footer__links">
+          <li><a href="customers.html">Заказчикам</a></li>
+          <li><a href="suppliers.html">Поставщикам</a></li>
+          <li><a href="automation.html">Автоматизация</a></li>
+          <li><a href="products.html">Продукты</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5 class="footer__heading">Контакты</h5>
+        <ul class="footer__contacts">
+          <li><a href="mailto:info@mospostavka.ru">info@mospostavka.ru</a></li>
+          <li><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li>Москва, Россия</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5 class="footer__heading">Документы</h5>
+        <ul class="footer__links">
+          <li><a href="#">Реквизиты</a></li>
+          <li><a href="#">Лицензии и сертификаты</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; 2026 МосПоставка. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="arka-ctabar">
+  <a href="#contact" class="btn btn--gold arka-ctabar__btn">Запросить цену</a>
+</div>
+
+<script src="../js/script.js"></script>
+<script>
+  (function(){
+    function bindAccordion(root){
+      root.querySelectorAll('.arka-accordion__item').forEach(function(item){
+        var head = item.querySelector('.arka-accordion__head');
+        var body = item.querySelector('.arka-accordion__body');
+        head.addEventListener('click', function(){
+          var isOpen = item.classList.contains('is-open');
+          root.querySelectorAll('.arka-accordion__item.is-open').forEach(function(other){
+            other.classList.remove('is-open');
+            other.querySelector('.arka-accordion__body').style.maxHeight = null;
+          });
+          if(!isOpen){
+            item.classList.add('is-open');
+            body.style.maxHeight = body.scrollHeight + 'px';
+          }
+        });
+      });
+    }
+    bindAccordion(document.getElementById('arkaAccordion'));
+    bindAccordion(document.getElementById('arkaFaq'));
+
+    var gallery = document.getElementById('arkaGallery');
+    var lightbox = document.getElementById('arkaLightbox');
+    var lbImg = document.getElementById('arkaLightboxImg');
+    var lbClose = document.getElementById('arkaLightboxClose');
+    if(gallery){
+      gallery.addEventListener('click', function(e){
+        var item = e.target.closest('.arka-gallery__item');
+        if(!item) return;
+        var full = item.getAttribute('data-full');
+        if(full){
+          lbImg.src = full;
+          lightbox.classList.add('is-open');
+        }
+      });
+    }
+    function closeLightbox(){
+      lightbox.classList.remove('is-open');
+      lbImg.src = '';
+    }
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e){
+      if(e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeLightbox();
+    });
+
+    var form = document.getElementById('leadForm');
+    var status = document.getElementById('leadStatus');
+    var submit = document.getElementById('leadSubmit');
+    if(form){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        status.className = 'arka-form__status';
+        status.textContent = '';
+        submit.disabled = true;
+        var originalText = submit.textContent;
+        submit.textContent = 'Отправляем...';
+        var data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(function(res){ return res.json(); })
+        .then(function(){
+          status.classList.add('is-success');
+          status.textContent = 'Заявка отправлена. Мы свяжемся с вами в течение рабочего дня.';
+          form.reset();
+        })
+        .catch(function(){
+          status.classList.add('is-error');
+          status.textContent = 'Не удалось отправить. Попробуйте ещё раз или напишите на postavka.mos@yandex.ru.';
+        })
+        .finally(function(){
+          submit.disabled = false;
+          submit.textContent = originalText;
+        });
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
