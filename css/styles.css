@@ -288,6 +288,10 @@ img { max-width: 100%; display: block; }
   background: radial-gradient(ellipse at 70% 50%, #0a2e5c 0%, #061a3d 40%, #042a26 80%, #0A0E1A 100%);
 }
 
+.slide--nauz {
+  background: radial-gradient(ellipse at 70% 50%, #2a1a06 0%, #1a1004 40%, #0d0802 70%, #0A0E1A 100%);
+}
+
 .slide__overlay {
   position: absolute;
   inset: 0;
@@ -671,7 +675,7 @@ img { max-width: 100%; display: block; }
    ============================ */
 .products-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
