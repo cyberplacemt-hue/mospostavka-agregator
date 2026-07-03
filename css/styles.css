@@ -1341,6 +1341,9 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 16px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
 }
 .team-card__name {
   font-size: 1.25rem;
@@ -1354,6 +1357,8 @@ img { max-width: 100%; display: block; }
   line-height: 1.5;
   margin-bottom: 28px;
   flex: 1;
+  display: flex;
+  align-items: flex-start;
 }
 .team-card__contacts {
   display: flex;
