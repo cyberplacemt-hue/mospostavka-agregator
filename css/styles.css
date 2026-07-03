@@ -1174,6 +1174,12 @@ img { max-width: 100%; display: block; }
 /* ============================
    АДАПТИВНОСТЬ
    ============================ */
+@media (max-width: 768px) {
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .container { padding: 0 32px; }
 
