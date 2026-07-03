@@ -679,7 +679,7 @@ img { max-width: 100%; display: block; }
    ============================ */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
