@@ -1171,12 +1171,6 @@ img { max-width: 100%; display: block; }
 /* ============================
    АДАПТИВНОСТЬ
    ============================ */
-@media (max-width: 768px) {
-  [style*="grid-template-columns: 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-  }
-}
-
 @media (max-width: 1024px) {
   .container { padding: 0 32px; }
 
@@ -1196,13 +1190,17 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 768px) {
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
   .container { padding: 0 20px; }
 
   .header { height: 64px; }
   :root { --header-h: 64px; }
 
   .logo { height: 44px; border: none; }
-  .logo__img { height: 44px; }
+  .logo__img { height: 44px; max-width: 120px; }
 
   .nav {
     display: none;
@@ -1211,9 +1209,11 @@ img { max-width: 100%; display: block; }
     left: 0; right: 0;
     background: var(--color-bg-2);
     flex-direction: column;
-    padding: 24px 20px;
+    padding: 20px 20px;
     gap: 4px;
     border-bottom: 1px solid var(--color-border);
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
   }
 
   .nav.active { display: flex; }
@@ -1225,6 +1225,7 @@ img { max-width: 100%; display: block; }
   .footer__inner { grid-template-columns: 1fr; gap: 40px; }
   .section { padding: 56px 0; }
   .roles { padding: 56px 0; }
+  .roles__grid { gap: 16px; }
 
   .hero-slider {
     height: 72vh;
@@ -1240,34 +1241,63 @@ img { max-width: 100%; display: block; }
   .slide__tag { font-size: 0.6875rem; padding: 6px 14px; margin-bottom: 20px; }
 
   .footer__logo { height: 52px; max-width: 160px; }
+  .footer__col { word-break: break-word; }
 
   .form { padding: 24px; }
 
   .section__header { margin-bottom: 48px; }
   .section__title { font-size: clamp(1.5rem, 6vw, 2rem); }
   .section__lead { font-size: 1rem; }
+  .section__header--center .section__lead { max-width: 100%; }
 
   .page { padding-top: calc(var(--header-h) + 40px); padding-bottom: 64px; }
   .page__header { margin-bottom: 48px; }
   .page__title { font-size: clamp(1.5rem, 6vw, 2rem); }
   .page__lead { font-size: 1rem; }
+  .page__content { max-width: 100%; }
   .page__content h3 { font-size: 1.25rem; margin: 40px 0 16px; }
   .page__content p { font-size: 1rem; }
+  .page__content li { font-size: 0.9375rem; gap: 10px; }
+  .page__content li svg { width: 16px; height: 16px; }
 
-  .feature-list__item { font-size: 0.9375rem; padding: 16px 0; }
-  .role-card { padding: 32px 28px; }
-  .role-card__title { font-size: 1.25rem; }
+  .feature-list__item { font-size: 0.9375rem; padding: 16px 0; gap: 12px; }
+  .feature-list__icon { width: 18px; height: 18px; }
+  .role-card { padding: 28px 24px; }
+  .role-card__title { font-size: 1.1875rem; }
+  .role-card__text { font-size: 0.875rem; }
   .tech-card { padding: 28px 24px; }
-  .process__step { padding: 28px 24px; }
-  .product-card__body { padding: 24px; }
-  .product-card__image { height: 220px; }
+  .tech-card__title { font-size: 1.0625rem; }
+  .tech-card__text { font-size: 0.875rem; }
+  .process__step { padding: 24px 20px; }
+  .process__title { font-size: 1rem; }
+  .process__text { font-size: 0.8125rem; }
+  .product-card__body { padding: 20px; }
+  .product-card__image { height: 180px; }
+  .product-card__title { font-size: 1.1875rem; }
+  .product-card__desc { font-size: 0.875rem; }
+  .product-card__features li { font-size: 0.8125rem; padding: 10px 0; }
+  .product-card__placeholder span { font-size: 2rem; }
+  .product-card__placeholder small { font-size: 0.6875rem; }
+
+  .team-card { padding: 24px; }
+  .team-card__role { font-size: 0.6875rem; min-height: 32px; }
+  .team-card__name { font-size: 1.125rem; }
+  .team-card__title { font-size: 0.8125rem; margin-bottom: 20px; }
+  .team-card__contacts { padding-top: 20px; gap: 12px; }
+  .team-card__contact { font-size: 0.875rem; }
+  .team-card__contact--muted { font-size: 0.75rem; }
+
+  .cta-final__title { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .cta-final__text { font-size: 1rem; }
+
+  .process__note { font-size: 0.875rem; padding: 20px 24px; }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 14px; }
 
   .logo { height: 40px; }
-  .logo__img { height: 40px; }
+  .logo__img { height: 40px; max-width: 100px; }
 
   .hero-slider { height: 68vh; min-height: 400px; }
   .slider-arrow { width: 36px; height: 36px; }
@@ -1275,16 +1305,18 @@ img { max-width: 100%; display: block; }
   .slider-arrow--next { right: 8px; }
   .slider-dots { bottom: 20px; gap: 8px; }
 
-  .slide__content { padding: 0 16px; }
-  .slide__title { font-size: 1.5rem; }
-  .slide__subtitle { font-size: 1.125rem; }
+  .slide__content { padding: 0 14px; }
+  .slide__title { font-size: 1.375rem; }
+  .slide__subtitle { font-size: 1rem; }
   .slide__text { display: none; }
   .slide__tag { font-size: 0.625rem; padding: 5px 12px; margin-bottom: 16px; }
-  .slide__buttons .btn { padding: 14px 20px; font-size: 0.8125rem; }
+  .slide__buttons .btn { padding: 12px 18px; font-size: 0.75rem; }
 
   .footer__logo { height: 48px; max-width: 140px; }
   .footer__inner { gap: 32px; }
   .footer__desc { font-size: 0.8125rem; }
+  .footer__heading { font-size: 0.6875rem; }
+  .footer__links a, .footer__contacts a { font-size: 0.8125rem; }
 
   .section__cta,
   .cta-final__buttons,
@@ -1297,9 +1329,42 @@ img { max-width: 100%; display: block; }
 
   .product-card__cta { flex-direction: column; }
   .product-card__cta .btn { width: 100%; }
+  .product-card__features li { font-size: 0.75rem; }
 
-  .btn { padding: 14px 24px; font-size: 0.8125rem; }
-  .btn--large { padding: 16px 28px; font-size: 0.875rem; }
+  .btn { padding: 12px 20px; font-size: 0.75rem; }
+  .btn--large { padding: 14px 24px; font-size: 0.8125rem; }
+  .btn--small { padding: 10px 16px; font-size: 0.6875rem; }
+
+  .role-card { padding: 24px 20px; }
+  .role-card__num { font-size: 0.6875rem; }
+  .role-card__title { font-size: 1.0625rem; }
+  .role-card__text { font-size: 0.8125rem; }
+
+  .tech-card { padding: 24px 20px; }
+  .process__step { padding: 20px 16px; }
+
+  .form { padding: 20px; }
+  .form__input, .form__textarea, .form__select { font-size: 0.875rem; padding: 12px 14px; }
+  .form__label { font-size: 0.6875rem; }
+
+  .team-card { padding: 20px; }
+  .team-card__name { font-size: 1.0625rem; }
+  .team-card__title { font-size: 0.75rem; margin-bottom: 16px; }
+  .team-card__contact { font-size: 0.8125rem; gap: 10px; }
+  .team-card__contact svg { width: 16px; height: 16px; }
+
+  .arka-specs th, .arka-specs td { padding: 10px 14px; font-size: 0.8125rem; }
+  .arka-specs th { width: 50%; }
+  .arka-specs__grp td { font-size: 0.625rem; padding: 8px 14px; }
+  .arka-hero__title { font-size: 1.5rem; }
+  .arka-hero__subtitle { font-size: 1rem; }
+  .arka-hero__lead { font-size: 0.875rem; margin-bottom: 24px; }
+  .arka-section__title { font-size: 1.375rem; }
+  .arka-section__lead { font-size: 0.875rem; }
+  .arka-section { padding: 48px 0; }
+  .arka-form { padding: 20px; }
+  .arka-form__input, .arka-form__textarea { font-size: 0.875rem; padding: 12px 14px; }
+  .arka-form__label { font-size: 0.6875rem; }
 }
 
 /* ============================

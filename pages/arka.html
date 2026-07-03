@@ -772,13 +772,56 @@
     @media (max-width: 768px) {
       .arka-ctabar { display: flex; }
       body { padding-bottom: 76px; }
+      .arka-hero { padding: calc(var(--header-h) + 40px) 0 64px; }
+      .arka-hero__title { font-size: 1.625rem; }
+      .arka-hero__subtitle { font-size: 1rem; }
+      .arka-hero__lead { font-size: 0.875rem; }
+      .arka-hero__point { font-size: 0.75rem; padding: 6px 12px; }
+      .arka-section { padding: 56px 0; }
+      .arka-section__title { font-size: 1.5rem; }
+      .arka-section__lead { font-size: 0.9375rem; }
+      .arka-info__value { font-size: 0.9375rem; }
+      .arka-info__label { font-size: 0.6875rem; }
+      .arka-feature__title { font-size: 1rem; }
+      .arka-feature__text { font-size: 0.8125rem; }
+      .arka-card__title { font-size: 1.0625rem; }
+      .arka-card__text { font-size: 0.875rem; }
+      .arka-format__title { font-size: 1.0625rem; }
+      .arka-format__text { font-size: 0.875rem; }
+      .arka-contact__value { font-size: 0.9375rem; }
+      .arka-contact__label { font-size: 0.6875rem; }
+      .arka-form { padding: 20px; }
+      .arka-form__input, .arka-form__textarea { font-size: 0.875rem; }
+      .arka-form__label { font-size: 0.6875rem; }
+      .arka-disclaimer p { font-size: 0.75rem; }
     }
     @media (max-width: 640px) {
       .arka-hero__cta { flex-direction: column; }
       .arka-hero__cta .btn { width: 100%; }
       .arka-form__row { grid-template-columns: 1fr; }
       .arka-gallery { grid-template-columns: 1fr; }
-      .arka-specs th, .arka-specs td { padding: 14px 18px; }
+      .arka-specs th, .arka-specs td {
+        display: block;
+        width: 100%;
+        padding: 8px 14px;
+        font-size: 0.8125rem;
+      }
+      .arka-specs th {
+        background: var(--color-bg-2);
+        border-bottom: none;
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .arka-specs td {
+        border-bottom: 1px solid var(--color-border);
+        padding-top: 4px;
+      }
+      .arka-specs__grp td {
+        padding: 8px 14px;
+        font-size: 0.625rem;
+      }
+      .arka-specs tr { border-bottom: 1px solid var(--color-border); }
     }
   </style>
 </head>
