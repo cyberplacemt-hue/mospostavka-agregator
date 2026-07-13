@@ -32,78 +32,64 @@
   </div>
 </header>
 
-<!-- ============ HERO — СЛАЙДЕР ============ -->
-<section class="hero-slider" id="heroSlider">
-  <div class="slider-track" id="sliderTrack">
-
-    <!-- Слайд 1: АРКА -->
-    <div class="slide slide--arka active">
-      <div class="slide__overlay"></div>
-      <div class="slide__content">
-        <div class="slide__tag">Официальный партнёр ООО «МЕДПЛАНТ»</div>
-        <h1 class="slide__title">Аппарат для проведения<br>сердечно-лёгочной реанимации</h1>
-        <div class="slide__subtitle">АРКА</div>
-        <div class="slide__buttons">
-          <a href="pages/arka.html" class="btn btn--gold btn--large">Перейти к продукту</a>
-          <a href="pages/contacts.html#customer-form" class="btn btn--ghost btn--large">Запросить спецификацию</a>
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__tag">44-ФЗ &middot; 223-ФЗ &middot; коммерческие закупки</div>
+      <h1 class="hero__title">Оператор тендерных поставок для заказчиков, производителей и дилеров</h1>
+      <p class="hero__lead">МосПоставка закрывает закупочную задачу от спецификации и документов до участия в процедуре, поставки, приёмки и закрытия контракта. Работаем через сеть проверенных производителей, дилеров и дистрибьюторов.</p>
+      <div class="hero__buttons">
+        <a href="pages/contacts.html#customer-form" class="btn btn--gold btn--large">Обсудить закупку</a>
+        <a href="pages/contacts.html#supplier-form" class="btn btn--ghost btn--large">Стать партнёром</a>
+      </div>
+      <div class="hero__roles" aria-label="Основные сценарии работы">
+        <a href="pages/customers.html" class="hero-role">
+          <span>Заказчикам</span>
+          <strong>Один контрагент для поставки, документов и приёмки</strong>
+        </a>
+        <a href="pages/suppliers.html" class="hero-role">
+          <span>Поставщикам</span>
+          <strong>Тендерные задачи без операционной нагрузки</strong>
+        </a>
+        <a href="pages/products.html" class="hero-role">
+          <span>Партнёрам</span>
+          <strong>Вывод продукта в B2B/B2G-канал</strong>
+        </a>
+      </div>
+    </div>
+    <div class="hero__visual" aria-label="Схема операционного контроля поставки">
+      <div class="deal-card">
+        <div class="deal-card__head">
+          <span>Операционная модель</span>
+          <strong>Поставка под контролем</strong>
+        </div>
+        <div class="deal-flow">
+          <div class="deal-flow__item">Запрос</div>
+          <div class="deal-flow__item">Поставщик</div>
+          <div class="deal-flow__item">Документы</div>
+          <div class="deal-flow__item">Процедура</div>
+          <div class="deal-flow__item">Поставка</div>
+          <div class="deal-flow__item">Приёмка</div>
+        </div>
+        <div class="deal-card__meta">
+          <div><span>Ответственность</span><strong>МосПоставка</strong></div>
+          <div><span>Контроль</span><strong>сроки, документы, статус</strong></div>
+          <div><span>Партнёры</span><strong>МЕДПЛАНТ / ПЛЕНКИН</strong></div>
         </div>
       </div>
     </div>
-
-    <!-- Слайд 2: Тендеры под ключ -->
-    <div class="slide slide--tender">
-      <div class="slide__overlay"></div>
-      <div class="slide__content">
-        <div class="slide__tag">Для заказчиков</div>
-        <h1 class="slide__title">Тендерные поставки<br>под ключ</h1>
-        <div class="slide__subtitle">44-ФЗ &middot; 223-ФЗ &middot; Коммерческие закупки</div>
-        <p class="slide__text">Подбираем поставщика, готовим пакет документов, участвуем в процедуре, поставляем и сопровождаем приёмку. Вы работаете с одним контрагентом.</p>
-        <div class="slide__buttons">
-          <a href="pages/customers.html" class="btn btn--primary btn--large">Я заказчик</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Слайд 3: Сеть поставщиков -->
-    <div class="slide slide--network">
-      <div class="slide__overlay"></div>
-      <div class="slide__content">
-        <div class="slide__tag">Для поставщиков и партнёров</div>
-        <h1 class="slide__title">Сеть проверенных<br>поставщиков</h1>
-        <div class="slide__subtitle">Производители &middot; Дилеры &middot; Дистрибьюторы</div>
-        <p class="slide__text">Вы фокусируетесь на продукте — мы на тендерном процессе. Поток задач под вашу номенклатуру, подготовка заявок, контроль исполнения.</p>
-        <div class="slide__buttons">
-          <a href="pages/suppliers.html" class="btn btn--primary btn--large">Стать поставщиком</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Слайд 4: ПЛЕНКИН -->
-    <div class="slide slide--plenkin">
-      <div class="slide__overlay"></div>
-      <div class="slide__content">
-        <div class="slide__tag">Архитектурные плёнки &middot; С 2009 года</div>
-        <h1 class="slide__title">Защищаем окна —<br>защищаем людей</h1>
-        <div class="slide__subtitle">ПЛЕНКИН</div>
-        <p class="slide__text">Противоосколочные и бронеплёнки К4–Р4А, солнцезащита, декор и смарт-плёнки. Поставка и монтаж по ГОСТ, гарантия до 15 лет. Москва и МО.</p>
-        <div class="slide__buttons">
-          <a href="https://plenkin.vercel.app" target="_blank" class="btn btn--gold btn--large">Перейти на сайт ПЛЕНКИН</a>
-          <a href="pages/contacts.html#customer-form" class="btn btn--ghost btn--large">Запросить расчёт</a>
-        </div>
-      </div>
-    </div>
-
   </div>
+</section>
 
-  <button class="slider-arrow slider-arrow--prev" id="sliderPrev" aria-label="Предыдущий слайд">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <button class="slider-arrow slider-arrow--next" id="sliderNext" aria-label="Следующий слайд">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-
-  <div class="slider-dots" id="sliderDots"></div>
-  <div class="slider-progress" id="sliderProgress"></div>
+<!-- ============ БЫСТРЫЕ ДОКАЗАТЕЛЬСТВА ============ -->
+<section class="proof-strip">
+  <div class="container proof-strip__grid">
+    <div class="proof-item"><span>Процедуры</span><strong>44-ФЗ / 223-ФЗ / коммерция</strong></div>
+    <div class="proof-item"><span>Модель</span><strong>один ответственный контрагент</strong></div>
+    <div class="proof-item"><span>Сеть</span><strong>производители, дилеры, дистрибьюторы</strong></div>
+    <div class="proof-item"><span>Контроль</span><strong>сроки, документы, приёмка</strong></div>
+  </div>
 </section>
 
 <!-- ============ КРАТКО О КОМПАНИИ ============ -->
@@ -112,21 +98,21 @@
     <div class="roles__grid">
       <div class="role-card">
         <div class="role-card__num">01 / Заказчикам</div>
-        <h3 class="role-card__title">Тендерные поставки под ключ</h3>
-        <p class="role-card__text">От подбора спецификации до приёмки. Полное сопровождение контракта с контролем сроков и документов.</p>
-        <a href="pages/customers.html" class="role-card__link">Подробнее &rarr;</a>
+        <h3 class="role-card__title">Закрыть закупочную задачу</h3>
+        <p class="role-card__text">Подбор решения под ТЗ, документы, участие в процедуре, поставка и приёмка через одного ответственного контрагента.</p>
+        <a href="pages/customers.html" class="role-card__link">Для заказчиков &rarr;</a>
       </div>
       <div class="role-card">
         <div class="role-card__num">02 / Поставщикам</div>
-        <h3 class="role-card__title">Вход в сеть проверенных поставщиков</h3>
-        <p class="role-card__text">Поток тендерных задач под вашу номенклатуру. Мы берём операционную часть — вы фокусируетесь на продукте.</p>
-        <a href="pages/suppliers.html" class="role-card__link">Стать поставщиком &rarr;</a>
+        <h3 class="role-card__title">Получать тендерные задачи</h3>
+        <p class="role-card__text">Производители, дилеры и дистрибьюторы получают канал закупочных задач с тендерным сопровождением каждой процедуры.</p>
+        <a href="pages/suppliers.html" class="role-card__link">Для поставщиков &rarr;</a>
       </div>
       <div class="role-card">
         <div class="role-card__num">03 / Продукты</div>
-        <h3 class="role-card__title">МЕДПЛАНТ, ПЛЕНКИН и новые партнёрства</h3>
-        <p class="role-card__text">Медицинское оборудование, архитектурные плёнки и смежные поставки. Каждая позиция — с документацией и сопровождением.</p>
-        <a href="pages/products.html" class="role-card__link">Наши продукты &rarr;</a>
+        <h3 class="role-card__title">Вывести продукт в B2B/B2G</h3>
+        <p class="role-card__text">Упаковываем продуктовые направления под тендерный канал: документы, спецификации, поставка, обучение и сопровождение.</p>
+        <a href="pages/products.html" class="role-card__link">Партнёрские продукты &rarr;</a>
       </div>
     </div>
   </div>
@@ -137,12 +123,12 @@
   <div class="container">
     <div class="section__header">
       <span class="section__tag">О компании</span>
-      <h2 class="section__title">Практикующий поставщик в тендерах</h2>
+      <h2 class="section__title">Оператор поставок, документов и исполнения</h2>
     </div>
     <div class="two-col">
       <div class="two-col__text">
-        <p>МосПоставка — практикующий поставщик в государственных и коммерческих тендерах. Мы участвуем в закупках, сопровождаем поставки и работаем с сетью проверенных производителей, дилеров и дистрибьюторов.</p>
-        <p>За каждой поставкой стоит реальный производитель или официальный партнёр. Мы не работаем через «серые» схемы и не перекладываем ответственность на цепочку посредников. Контролируем сроки, документы и исполнение — от заявки до приёмки.</p>
+        <p>МосПоставка работает на стыке закупок, поставок и партнёрского канала. Мы помогаем заказчикам закрывать позиции по 44-ФЗ, 223-ФЗ и коммерческим процедурам, а производителям и дилерам — выходить в тендерный рынок без отдельной тендерной команды под каждую заявку.</p>
+        <p>Мы берём на себя операционную часть: спецификацию, документы, участие, сроки, поставку, приёмку и закрывающие документы. За каждой поставкой стоит проверенный поставщик, официальный партнёр или производитель.</p>
       </div>
       <ul class="feature-list">
         <li class="feature-list__item">
@@ -155,7 +141,7 @@
         </li>
         <li class="feature-list__item">
           <svg class="feature-list__icon" viewBox="0 0 20 20" fill="none"><path d="M5 10l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Медицинское оборудование, бронезащита, архитектурные плёнки</span>
+          <span>Медицинское оборудование, изделия, архитектурные плёнки и смежные решения</span>
         </li>
         <li class="feature-list__item">
           <svg class="feature-list__icon" viewBox="0 0 20 20" fill="none"><path d="M5 10l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -167,7 +153,7 @@
         </li>
         <li class="feature-list__item">
           <svg class="feature-list__icon" viewBox="0 0 20 20" fill="none"><path d="M5 10l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Поставки по всей России — от Калининграда до Дальнего Востока</span>
+          <span>Поставки по России с контролем логистики, приёмки и закрывающих документов</span>
         </li>
       </ul>
     </div>
@@ -179,28 +165,28 @@
   <div class="container">
     <div class="section__header section__header--center">
       <span class="section__tag">Доверие</span>
-      <h2 class="section__title">Почему нам доверяют</h2>
+      <h2 class="section__title">Доверие строится на контроле, документах и ответственности</h2>
     </div>
     <div class="tech-grid">
       <div class="tech-card">
         <svg class="tech-card__icon" viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="28" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 20l4 4 12-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h4 class="tech-card__title">Поставка с НДС</h4>
-        <p class="tech-card__text">Полный комплект закрывающих документов. Работаем по договору, с юрлицами и по типовым формам заказчика.</p>
+        <h4 class="tech-card__title">Один ответственный контрагент</h4>
+        <p class="tech-card__text">Заказчик не управляет цепочкой участников. Координация поставщика, сроков, документов и приёмки находится на стороне МосПоставки.</p>
       </div>
       <div class="tech-card">
         <svg class="tech-card__icon" viewBox="0 0 40 40" fill="none"><path d="M20 8v24M8 20h24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.5"/></svg>
-        <h4 class="tech-card__title">Знаем 44-ФЗ и 223-ФЗ</h4>
-        <p class="tech-card__text">Нацрежим, КТРУ, обоснование НМЦК, запросы разъяснений, протокольные разногласия — на практике, не в теории.</p>
+        <h4 class="tech-card__title">Практика 44-ФЗ и 223-ФЗ</h4>
+        <p class="tech-card__text">Учитываем требования к ТЗ, КТРУ, документам, национальному режиму, срокам и закрытию контракта.</p>
       </div>
       <div class="tech-card">
         <svg class="tech-card__icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="14" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M8 32c0-6 6-10 12-10s12 4 12 10" stroke="currentColor" stroke-width="1.5"/></svg>
-        <h4 class="tech-card__title">Реальные производители</h4>
-        <p class="tech-card__text">За каждой поставкой — производитель или официальный дилер. Без «серых» схем и переплат через цепочку посредников.</p>
+        <h4 class="tech-card__title">Проверенные поставщики</h4>
+        <p class="tech-card__text">Работаем с производителями, дилерами и дистрибьюторами, которые проходят проверку по документам, номенклатуре и готовности к исполнению.</p>
       </div>
       <div class="tech-card">
         <svg class="tech-card__icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M20 12v8l5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <h4 class="tech-card__title">Контроль сроков</h4>
-        <p class="tech-card__text">Дедлайны по контракту отслеживаем. Уведомления о приближении сроков. Претензионная работа — на нашей стороне.</p>
+        <h4 class="tech-card__title">Контроль сроков и статуса</h4>
+        <p class="tech-card__text">Фиксируем этапы поставки, ответственных, документы и дедлайны, чтобы закупка не распадалась на разрозненную переписку.</p>
       </div>
       <div class="tech-card">
         <svg class="tech-card__icon" viewBox="0 0 40 40" fill="none"><path d="M12 20l4 4 12-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 32V16M16 32V8M24 32V20M32 32V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -209,8 +195,8 @@
       </div>
       <div class="tech-card">
         <svg class="tech-card__icon" viewBox="0 0 40 40" fill="none"><path d="M20 6l12 4v10c0 7-5 12-12 14-7-2-12-7-12-14V10l12-4z" stroke="currentColor" stroke-width="1.5"/></svg>
-        <h4 class="tech-card__title">Ответственность за результат</h4>
-        <p class="tech-card__text">Если что-то идёт не по плану — решаем за свой счёт, а не перекладываем на заказчика или поставщика.</p>
+        <h4 class="tech-card__title">Закрытие документов</h4>
+        <p class="tech-card__text">Контролируем не только отгрузку, но и приёмку, закрывающие документы и сопровождение спорных ситуаций.</p>
       </div>
     </div>
   </div>
@@ -221,12 +207,12 @@
   <div class="container">
     <div class="section__header">
       <span class="section__tag">Для заказчиков</span>
-      <h2 class="section__title">Тендерные поставки под ключ</h2>
+      <h2 class="section__title">Закрываем закупочную задачу одним контрагентом</h2>
     </div>
     <div class="two-col">
       <div class="two-col__text">
-        <p>Вам нужно закрыть позицию в закупке — мы берём задачу под ключ. Подбираем поставщика из проверенной сети, готовим спецификацию и пакет документов, участвуем в процедуре, поставляем и сопровождаем приёмку.</p>
-        <p>Вы работаете с одним контрагентом, а не с цепочкой посредников. Все этапы — от заявки до закрывающих документов — под контролем. Если что-то идёт не по плану, решаем за свой счёт.</p>
+        <p>Если нужно поставить оборудование, изделие или решение по ТЗ, МосПоставка берёт задачу в работу: уточняет спецификацию, подбирает поставщика, готовит документы, участвует в процедуре, контролирует поставку и сопровождает приёмку.</p>
+        <p>Заказчик получает не набор подрядчиков, а одну управляемую точку ответственности по срокам, документам и исполнению.</p>
       </div>
       <ul class="feature-list">
         <li class="feature-list__item">
@@ -243,7 +229,7 @@
         </li>
         <li class="feature-list__item">
           <svg class="feature-list__icon" viewBox="0 0 20 20" fill="none"><path d="M5 10l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Контроль сроков: дедлайны, статусы, документы — в одном месте</span>
+          <span>Контроль сроков, документов и исполнения на стороне МосПоставки</span>
         </li>
         <li class="feature-list__item">
           <svg class="feature-list__icon" viewBox="0 0 20 20" fill="none"><path d="M5 10l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -266,7 +252,7 @@
   <div class="container">
     <div class="section__header">
       <span class="section__tag">Для поставщиков и партнёров</span>
-      <h2 class="section__title">Как попасть в сеть проверенных поставщиков</h2>
+      <h2 class="section__title">Тендерный канал без собственной тендерной нагрузки</h2>
     </div>
     <div class="two-col two-col--reverse">
       <ul class="feature-list">
@@ -284,7 +270,7 @@
         </li>
         <li class="feature-list__item">
           <svg class="feature-list__icon" viewBox="0 0 20 20" fill="none"><path d="M5 10l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Контроль исполнения контракта и сопровождение до приёмки</span>
+          <span>Сопровождение исполнения контракта до поставки, приёмки и оплаты</span>
         </li>
         <li class="feature-list__item">
           <svg class="feature-list__icon" viewBox="0 0 20 20" fill="none"><path d="M5 10l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -296,8 +282,8 @@
         </li>
       </ul>
       <div class="two-col__text">
-        <p>Вы производите или поставляете продукцию и хотите заходить в тендеры без операционной нагрузки: без ручного мониторинга площадок, без юриста на каждую заявку, без просроченных контрактов. Мы берём тендерный процесс на себя — вы фокусируетесь на продукте.</p>
-        <p>Мы отбираем поставщиков в сеть, проверяем и сопровождаем. Вы получаете поток задач под свою номенклатуру, готовые заявки и контроль исполнения. Экономика каждой сделки прозрачна — вы видите маржу и стоимость участия до принятия решения.</p>
+        <p>Производители, дилеры и дистрибьюторы получают доступ к релевантным закупочным задачам, а МосПоставка берёт на себя тендерную операционку: мониторинг, документы, заявки, обеспечение, участие, контроль исполнения и коммуникацию с заказчиком.</p>
+        <p>Вы отвечаете за продукт, качество и поставку. Мы отвечаем за тендерный процесс, управление сделкой и закрытие обязательств.</p>
       </div>
     </div>
     <div class="section__cta">
@@ -312,49 +298,49 @@
   <div class="container">
     <div class="section__header section__header--center">
       <span class="section__tag">Как мы работаем</span>
-      <h2 class="section__title">Путь от запроса до исполнения контракта</h2>
-      <p class="section__lead">Один процесс — для заказчика и для поставщика. Каждый этап под контролем. Если что-то идёт не по плану — решаем, а не ищем, на кого переложить.</p>
+      <h2 class="section__title">От запроса до закрытого контракта</h2>
+      <p class="section__lead">Процесс строится вокруг понятных этапов, ответственных лиц, документов и сроков. Это снижает риск срыва поставки и потери контроля.</p>
     </div>
     <div class="process">
       <div class="process__step">
         <div class="process__num">01</div>
-        <h4 class="process__title">Запрос</h4>
-        <p class="process__text">Заказчик формирует потребность или мы находим подходящую закупку под номенклатуру поставщика.</p>
+        <h4 class="process__title">Запрос или задача</h4>
+        <p class="process__text">Фиксируем потребность, ТЗ, сроки, бюджет, категорию продукции и ограничения процедуры.</p>
       </div>
       <div class="process__step">
         <div class="process__num">02</div>
-        <h4 class="process__title">Отбор поставщика</h4>
-        <p class="process__text">Из проверенной сети выбираем исполнителя под позицию, склад и логистику.</p>
+        <h4 class="process__title">Подбор решения</h4>
+        <p class="process__text">Выбираем поставщика или партнёрский продукт под спецификацию, документы, склад и логистику.</p>
       </div>
       <div class="process__step">
         <div class="process__num">03</div>
-        <h4 class="process__title">Подготовка заявки</h4>
-        <p class="process__text">Спецификация, ТЗ / КТРУ, обеспечение, правовая проверка.</p>
+        <h4 class="process__title">Документы</h4>
+        <p class="process__text">Готовим спецификацию, пакет документов, подтверждения, обеспечение и правовую проверку.</p>
       </div>
       <div class="process__step">
         <div class="process__num">04</div>
-        <h4 class="process__title">Участие и выигрыш</h4>
-        <p class="process__text">Подача на ЭТП, торги, подписание контракта.</p>
+        <h4 class="process__title">Участие в процедуре</h4>
+        <p class="process__text">Подаём заявку на ЭТП, сопровождаем торги, разъяснения и подписание контракта.</p>
       </div>
       <div class="process__step">
         <div class="process__num">05</div>
         <h4 class="process__title">Поставка</h4>
-        <p class="process__text">Производство, отгрузка, логистика, приёмка, закрывающие документы.</p>
+        <p class="process__text">Организуем производство или отгрузку, логистику, коммуникацию участников и контроль сроков.</p>
       </div>
       <div class="process__step">
         <div class="process__num">06</div>
-        <h4 class="process__title">Контроль исполнения</h4>
-        <p class="process__text">Сроки, статусы, уведомления, претензионная работа.</p>
+        <h4 class="process__title">Приёмка</h4>
+        <p class="process__text">Сопровождаем передачу, проверку, комплект документов и вопросы по фактическому исполнению.</p>
       </div>
       <div class="process__step">
         <div class="process__num">07</div>
-        <h4 class="process__title">Результат</h4>
-        <p class="process__text">Заказчик получил поставку, поставщик получил оплату, документы закрыты.</p>
+        <h4 class="process__title">Закрытие</h4>
+        <p class="process__text">Закрываем документы, статусы и обязательства по контракту до финального результата.</p>
       </div>
       <div class="process__step" style="background: var(--color-surface);">
         <div class="process__num" style="color: var(--color-gold-2);">08</div>
-        <h4 class="process__title" style="color: var(--color-gold-2);">Гарантия</h4>
-        <p class="process__text">Если что-то пошло не по плану — решаем за свой счёт, а не перекладываем на заказчика или поставщика.</p>
+        <h4 class="process__title" style="color: var(--color-gold-2);">Контроль</h4>
+        <p class="process__text">Держим в фокусе сроки, ответственных, документы, риски и коммуникацию сторон.</p>
       </div>
     </div>
   </div>
@@ -365,10 +351,10 @@
   <div class="container">
     <div class="section__header">
       <span class="section__tag">Продукты и решения</span>
-      <h2 class="section__title">Продукты и партнёрства</h2>
+      <h2 class="section__title">Продукты, готовые к тендерному каналу</h2>
     </div>
     <p style="font-size: 1.125rem; color: var(--color-text-2); max-width: 680px; margin-bottom: 48px; line-height: 1.7;">
-      Мы работаем с конкретными продуктами и официальными партнёрствами. Каждая позиция — с подтверждённой документацией, регистрацией и сопровождением.
+      Мы развиваем продуктовые направления, которые можно поставлять в B2B/B2G-закупки с понятной документацией, спецификацией, логистикой и сопровождением.
     </p>
     <div class="products-grid">
       <div class="product-card product-card--featured">
@@ -425,7 +411,7 @@
         </div>
         <div class="product-card__body">
           <h4 class="product-card__title">Новые партнёрства</h4>
-          <p class="product-card__desc">Реанимационное оборудование, диагностические решения, архитектурные плёнки и изделия медназначения.</p>
+          <p class="product-card__desc">Реанимационное оборудование, диагностические решения, архитектурные решения и изделия медицинского назначения.</p>
           <div class="product-card__cta">
             <a href="pages/products.html" class="btn btn--ghost btn--small">Узнать о расширении</a>
           </div>
@@ -439,8 +425,8 @@
 <section class="section--cta-final" id="cta">
   <div class="container">
     <div class="cta-final">
-      <h2 class="cta-final__title">Расскажите, какая у вас задача</h2>
-      <p class="cta-final__text">Закупка, поставка или партнёрство — подберём решение под вашу ситуацию.</p>
+      <h2 class="cta-final__title">Обсудим закупку, поставку или партнёрство</h2>
+      <p class="cta-final__text">Опишите задачу и роль вашей компании. Мы определим формат работы, список документов и ближайший практический шаг.</p>
       <div class="cta-final__buttons">
         <a href="pages/contacts.html#customer-form" class="btn btn--gold btn--large">Заявка от заказчика</a>
         <a href="pages/contacts.html#supplier-form" class="btn btn--ghost btn--large">Заявка от поставщика</a>
@@ -489,9 +475,9 @@
       <div class="footer__col">
         <h5 class="footer__heading">Документы</h5>
         <ul class="footer__links">
-          <li><a href="#">Реквизиты</a></li>
-          <li><a href="#">Лицензии и сертификаты</a></li>
-          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="pages/documents.html#requisites">Реквизиты</a></li>
+          <li><a href="pages/documents.html#certificates">Лицензии и сертификаты</a></li>
+          <li><a href="pages/documents.html#privacy">Политика конфиденциальности</a></li>
         </ul>
       </div>
     </div>

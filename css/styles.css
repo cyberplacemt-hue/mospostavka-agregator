@@ -231,7 +231,249 @@ img { max-width: 100%; display: block; }
 .btn--small { padding: 10px 20px; font-size: 0.8125rem; }
 
 /* ============================
-   HERO — СЛАЙДЕР
+   HERO
+   ============================ */
+.hero {
+  position: relative;
+  min-height: calc(100vh - var(--header-h));
+  padding: 150px 0 90px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(10, 14, 26, 0.96) 0%, rgba(10, 14, 26, 0.82) 54%, rgba(10, 14, 26, 0.68) 100%),
+    radial-gradient(ellipse at 78% 42%, rgba(59, 130, 246, 0.24) 0%, rgba(6, 26, 61, 0.42) 38%, transparent 70%),
+    var(--color-bg);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.7fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.hero__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-gold-2);
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hero__title {
+  max-width: 860px;
+  font-size: clamp(2.25rem, 5vw, 4.6rem);
+  line-height: 1.06;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 28px;
+  letter-spacing: 0;
+}
+
+.hero__lead {
+  max-width: 720px;
+  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  line-height: 1.75;
+  color: var(--color-text-2);
+  margin-bottom: 38px;
+}
+
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+
+.hero__roles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  max-width: 860px;
+}
+
+.hero-role {
+  min-height: 132px;
+  padding: 24px;
+  background: rgba(15, 21, 37, 0.86);
+  transition: all var(--transition-fast);
+}
+
+.hero-role:hover {
+  background: var(--color-surface);
+}
+
+.hero-role span {
+  display: block;
+  color: var(--color-gold-2);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.hero-role strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.hero__visual {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.deal-card {
+  width: 100%;
+  background: rgba(22, 30, 51, 0.78);
+  border: 1px solid var(--color-border-hover);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 28px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.deal-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 24px;
+}
+
+.deal-card__head span,
+.deal-card__meta span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.deal-card__head strong {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.deal-flow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.deal-flow__item {
+  position: relative;
+  padding: 16px 16px 16px 42px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.deal-flow__item::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: var(--color-gold-2);
+  box-shadow: 0 0 0 4px var(--color-gold-glow);
+}
+
+.deal-card__meta {
+  display: grid;
+  gap: 14px;
+}
+
+.deal-card__meta div {
+  padding: 14px 0 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.deal-card__meta strong {
+  display: block;
+  color: var(--color-text);
+  margin-top: 4px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.proof-strip {
+  background: var(--color-bg-2);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.proof-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+}
+
+.proof-item {
+  min-height: 112px;
+  padding: 28px 24px;
+  background: var(--color-bg-2);
+}
+
+.proof-item span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-text-3);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.proof-item strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+/* ============================
+   HERO — СЛАЙДЕР (legacy)
    ============================ */
 .hero-slider {
   position: relative;
@@ -331,7 +573,7 @@ img { max-width: 100%; display: block; }
   font-size: clamp(2rem, 5.5vw, 4.25rem);
   font-weight: 700;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   color: var(--color-text);
   margin-bottom: 24px;
   max-width: 760px;
@@ -486,7 +728,7 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: 12px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .role-card__text {
@@ -562,7 +804,7 @@ img { max-width: 100%; display: block; }
 .section__title {
   font-size: clamp(1.875rem, 4vw, 2.75rem);
   font-weight: 700;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   color: var(--color-text);
   margin-bottom: 16px;
   line-height: 1.15;
@@ -665,7 +907,7 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: 10px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .tech-card__text {
@@ -863,7 +1105,7 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: 8px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .process__text {
@@ -906,7 +1148,7 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   color: var(--color-text);
   margin-bottom: 20px;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }
 
 .cta-final__text {
@@ -1062,7 +1304,7 @@ img { max-width: 100%; display: block; }
   font-size: clamp(1.875rem, 4vw, 2.75rem);
   font-weight: 700;
   color: var(--color-text);
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   margin-bottom: 20px;
   line-height: 1.15;
 }
@@ -1083,7 +1325,7 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   color: var(--color-text);
   margin: 56px 0 20px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .page__content p {
@@ -1219,6 +1461,10 @@ img { max-width: 100%; display: block; }
 @media (max-width: 1024px) {
   .container { padding: 0 32px; }
 
+  .hero__inner { grid-template-columns: 1fr; gap: 44px; }
+  .hero__visual { max-width: 680px; }
+  .proof-strip__grid { grid-template-columns: repeat(2, 1fr); }
+
   .roles__grid { grid-template-columns: 1fr; }
   .tech-grid { grid-template-columns: repeat(2, 1fr); }
   .process { grid-template-columns: repeat(2, 1fr); }
@@ -1265,6 +1511,19 @@ img { max-width: 100%; display: block; }
   .burger { display: flex; }
 
   .two-col { grid-template-columns: 1fr; }
+  .hero { min-height: auto; padding: 108px 0 52px; }
+  .hero__inner { gap: 32px; }
+  .hero__title { font-size: clamp(2rem, 9vw, 3rem); }
+  .hero__lead { font-size: 1rem; margin-bottom: 28px; }
+  .hero__buttons { flex-direction: column; margin-bottom: 28px; }
+  .hero__buttons .btn { width: 100%; }
+  .hero__roles { grid-template-columns: 1fr; }
+  .hero-role { min-height: auto; padding: 20px; }
+  .deal-card { padding: 20px; }
+  .deal-card__head { flex-direction: column; gap: 8px; }
+  .deal-flow { grid-template-columns: 1fr; }
+  .proof-strip__grid { grid-template-columns: 1fr; }
+  .proof-item { min-height: auto; padding: 22px 20px; }
   .tech-grid { grid-template-columns: 1fr; }
   .process { grid-template-columns: 1fr; }
   .products-grid { grid-template-columns: 1fr; }
@@ -1352,6 +1611,14 @@ img { max-width: 100%; display: block; }
 
   .logo { height: 40px; }
   .logo__img { height: 40px; max-width: 100px; }
+
+  .hero { padding: 92px 0 40px; }
+  .hero__tag { font-size: 0.625rem; padding: 6px 12px; margin-bottom: 18px; letter-spacing: 0.06em; }
+  .hero__title { font-size: 1.8rem; line-height: 1.12; margin-bottom: 18px; }
+  .hero__lead { font-size: 0.9375rem; line-height: 1.65; }
+  .hero-role strong { font-size: 0.875rem; }
+  .deal-flow__item { padding: 14px 14px 14px 38px; font-size: 0.875rem; }
+  .deal-card__meta strong { font-size: 0.875rem; }
 
   .hero-slider { height: 72vh; min-height: 380px; }
   .slider-arrow { width: 36px; height: 36px; }
