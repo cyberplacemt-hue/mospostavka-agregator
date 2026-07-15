@@ -41,7 +41,7 @@
     .arka-hero__title {
       font-size: clamp(2rem, 4.5vw, 3.25rem);
       font-weight: 700;
-      letter-spacing: -0.025em;
+      letter-spacing: 0;
       color: var(--color-text);
       line-height: 1.1;
       margin-bottom: 16px;
@@ -135,7 +135,7 @@
     .arka-section__title {
       font-size: clamp(1.875rem, 4vw, 2.75rem);
       font-weight: 700;
-      letter-spacing: -0.025em;
+      letter-spacing: 0;
       color: var(--color-text);
       margin-bottom: 16px;
       line-height: 1.15;
@@ -823,6 +823,34 @@
       }
       .arka-specs tr { border-bottom: 1px solid var(--color-border); }
     }
+    @media (max-width: 480px) {
+      .arka-hero__tag,
+      .arka-section__tag {
+        align-items: flex-start;
+        letter-spacing: 0.06em;
+        line-height: 1.45;
+      }
+      .arka-hero__tag::before,
+      .arka-section__tag::before {
+        flex: 0 0 18px;
+        width: 18px;
+        margin-top: 0.65em;
+      }
+      .arka-hero__points { gap: 8px; }
+      .arka-hero__point { width: 100%; justify-content: flex-start; }
+      .arka-card,
+      .arka-format,
+      .arka-proof,
+      .arka-contact__item,
+      .arka-gisp { padding: 20px; }
+      .arka-tick-list li,
+      .arka-docs-list li { padding: 16px; align-items: flex-start; }
+      .arka-accordion__head { padding: 18px 20px; font-size: 0.9375rem; }
+      .arka-accordion__body-inner { padding: 0 20px 20px; font-size: 0.875rem; }
+      .arka-badge { display: flex; align-items: flex-start; width: 100%; padding: 12px 14px; }
+      .arka-ctabar { padding: 12px 14px calc(12px + env(safe-area-inset-bottom)); }
+      .arka-ctabar__btn { max-width: none; }
+    }
   </style>
 </head>
 <body>
@@ -852,7 +880,7 @@
         <span class="arka-hero__tag">Медицинское оборудование · Реанимация</span>
         <h1 class="arka-hero__title">Автоматический аппарат сердечно-лёгочной реанимации «АРКА»</h1>
         <p class="arka-hero__subtitle">с тендерным сопровождением под ключ</p>
-        <p class="arka-hero__lead">«АРКА» — российский аппарат для непрямого массажа сердца и искусственной вентиляции лёгких. Подаём в больницы, скорую помощь и частные клиники через 44-ФЗ, 223-ФЗ и коммерческие закупки. Сопровождаем поставку, документооборот и обучение.</p>
+        <p class="arka-hero__lead">«АРКА» — российский аппарат для непрямого массажа сердца и искусственной вентиляции лёгких. Поставляем в больницы, скорую помощь и крупным заказчикам через 44-ФЗ и 223-ФЗ; коммерческие проекты рассматриваем с проверенными партнёрами. Сопровождаем поставку, документооборот и обучение.</p>
         <div class="arka-hero__points">
           <span class="arka-hero__point"><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>РУ РЗН 2024/24065</span>
           <span class="arka-hero__point"><svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Внесён в ГИСП</span>

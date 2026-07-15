@@ -1505,9 +1505,13 @@ img { max-width: 100%; display: block; }
     border-bottom: 1px solid var(--color-border);
     max-height: calc(100vh - var(--header-h));
     overflow-y: auto;
+    z-index: 1001;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.32);
   }
 
   .nav.active { display: flex; }
+  .nav__link { width: 100%; padding: 12px 14px; }
+  .nav__link--cta { text-align: center; }
   .burger { display: flex; }
 
   .two-col { grid-template-columns: 1fr; }
@@ -1589,8 +1593,8 @@ img { max-width: 100%; display: block; }
   .product-card__title { font-size: 1.1875rem; }
   .product-card__desc { font-size: 0.875rem; }
   .product-card__features li { font-size: 0.8125rem; padding: 10px 0; }
-  .product-card__placeholder span { font-size: 2rem; }
-  .product-card__placeholder small { font-size: 0.6875rem; }
+  .product-card__placeholder span { font-size: 1.75rem; letter-spacing: 0; overflow-wrap: anywhere; }
+  .product-card__placeholder small { font-size: 0.6875rem; letter-spacing: 0; overflow-wrap: anywhere; }
 
   .team-card { padding: 24px; }
   .team-card__role { font-size: 0.6875rem; min-height: 32px; }
@@ -1658,7 +1662,7 @@ img { max-width: 100%; display: block; }
   .product-card__cta .btn { width: 100%; }
   .product-card__features li { font-size: 0.75rem; }
 
-  .btn { padding: 12px 20px; font-size: 0.75rem; }
+  .btn { padding: 12px 20px; font-size: 0.75rem; min-height: 44px; text-align: center; white-space: normal; }
   .btn--large { padding: 14px 24px; font-size: 0.8125rem; }
   .btn--small { padding: 10px 16px; font-size: 0.6875rem; }
 
@@ -1782,4 +1786,18 @@ img { max-width: 100%; display: block; }
 .team-card__contact--muted svg { color: var(--color-text-3); }
 @media (max-width: 768px) {
   .team-grid { grid-template-columns: 1fr; }
+  .team-card { padding: 24px; }
+  .team-card__role { font-size: 0.6875rem; min-height: 32px; }
+  .team-card__name { font-size: 1.125rem; }
+  .team-card__title { font-size: 0.8125rem; margin-bottom: 20px; }
+  .team-card__contacts { padding-top: 20px; gap: 12px; }
+  .team-card__contact { font-size: 0.875rem; }
+  .team-card__contact--muted { font-size: 0.75rem; }
+}
+@media (max-width: 480px) {
+  .team-card { padding: 20px; }
+  .team-card__name { font-size: 1.0625rem; }
+  .team-card__title { font-size: 0.75rem; margin-bottom: 16px; }
+  .team-card__contact { font-size: 0.8125rem; gap: 10px; }
+  .team-card__contact svg { width: 16px; height: 16px; }
 }
