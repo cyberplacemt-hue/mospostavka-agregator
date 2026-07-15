@@ -1,0 +1,39 @@
+{
+  "redirects": [
+    {
+      "source": "/customers.html",
+      "destination": "/pages/customers.html",
+      "permanent": true
+    },
+    {
+      "source": "/suppliers.html",
+      "destination": "/pages/suppliers.html",
+      "permanent": true
+    },
+    {
+      "source": "/products.html",
+      "destination": "/pages/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/contacts.html",
+      "destination": "/pages/contacts.html",
+      "permanent": true
+    },
+    {
+      "source": "/documents.html",
+      "destination": "/pages/documents.html",
+      "permanent": true
+    },
+    {
+      "source": "/arka.html",
+      "destination": "/pages/arka.html",
+      "permanent": true
+    }
+  ]
+}
