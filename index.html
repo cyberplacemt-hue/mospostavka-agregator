@@ -58,24 +58,52 @@
         </a>
       </div>
     </div>
-    <div class="hero__visual" aria-label="Схема операционного контроля поставки">
-      <div class="deal-card">
-        <div class="deal-card__head">
-          <span>Операционная модель</span>
-          <strong>Поставка под контролем</strong>
+    <div class="hero__visual" aria-label="Панель операционного контроля поставки">
+      <div class="ops-panel">
+        <div class="ops-panel__top">
+          <div>
+            <span>Операционный центр</span>
+            <strong>Закупка под управлением</strong>
+          </div>
+          <div class="ops-status">В работе</div>
         </div>
-        <div class="deal-flow">
-          <div class="deal-flow__item">Запрос</div>
-          <div class="deal-flow__item">Поставщик</div>
-          <div class="deal-flow__item">Документы</div>
-          <div class="deal-flow__item">Процедура</div>
-          <div class="deal-flow__item">Поставка</div>
-          <div class="deal-flow__item">Приёмка</div>
+        <div class="ops-panel__summary">
+          <div><span>Процедура</span><strong>44-ФЗ / 223-ФЗ</strong></div>
+          <div><span>Контракт</span><strong>до 10 млн ₽</strong></div>
+          <div><span>SLA</span><strong>контроль сроков</strong></div>
         </div>
-        <div class="deal-card__meta">
-          <div><span>Ответственность</span><strong>МосПоставка</strong></div>
-          <div><span>Контроль</span><strong>сроки, документы, статус</strong></div>
-          <div><span>Партнёры</span><strong>МЕДПЛАНТ / ПЛЕНКИН</strong></div>
+        <div class="ops-progress" aria-label="Этапы исполнения закупки">
+          <div class="ops-progress__line"><span></span></div>
+          <div class="ops-progress__steps">
+            <span class="is-done">ТЗ</span>
+            <span class="is-done">Поставщик</span>
+            <span class="is-current">Документы</span>
+            <span>Процедура</span>
+            <span>Поставка</span>
+            <span>Приёмка</span>
+          </div>
+        </div>
+        <div class="ops-table" aria-label="Контроль документов и рисков">
+          <div class="ops-row">
+            <span>Спецификация и КТРУ</span>
+            <strong class="ops-chip ops-chip--ok">проверено</strong>
+          </div>
+          <div class="ops-row">
+            <span>РУ / сертификаты / ГОСТ</span>
+            <strong class="ops-chip ops-chip--work">в сборе</strong>
+          </div>
+          <div class="ops-row">
+            <span>Поставщик и склад</span>
+            <strong class="ops-chip ops-chip--ok">подтверждено</strong>
+          </div>
+          <div class="ops-row">
+            <span>Логистика и приёмка</span>
+            <strong class="ops-chip">план</strong>
+          </div>
+        </div>
+        <div class="ops-panel__footer">
+          <div><span>Ответственный</span><strong>МосПоставка</strong></div>
+          <div><span>Канал</span><strong>партнёрская сеть</strong></div>
         </div>
       </div>
     </div>
@@ -198,6 +226,52 @@
         <h4 class="tech-card__title">Закрытие документов</h4>
         <p class="tech-card__text">Контролируем не только отгрузку, но и приёмку, закрывающие документы и сопровождение спорных ситуаций.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ СИСТЕМА КОНТРОЛЯ ============ -->
+<section class="section section--dark" id="control-system">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__tag">Система контроля</span>
+      <h2 class="section__title">Управляем закупкой как операционным проектом</h2>
+      <p class="section__lead">Каждая задача ведётся по статусам, документам, ответственным и контрольным точкам. Это снижает зависимость от разрозненной переписки и даёт заказчику понятную картину исполнения.</p>
+    </div>
+    <div class="control-board">
+      <div class="control-board__main">
+        <div class="control-board__head">
+          <span>Контур исполнения</span>
+          <strong>Документы, сроки, поставка, приёмка</strong>
+        </div>
+        <div class="control-lanes">
+          <div class="control-lane">
+            <span>01</span>
+            <strong>ТЗ и спецификация</strong>
+            <p>Проверяем состав позиции, ограничения процедуры, КТРУ, аналоги и требования к подтверждающим документам.</p>
+          </div>
+          <div class="control-lane">
+            <span>02</span>
+            <strong>Поставщик и документы</strong>
+            <p>Подтверждаем партнёра, наличие, сроки, сертификаты, РУ, ГОСТ и комплект для участия.</p>
+          </div>
+          <div class="control-lane">
+            <span>03</span>
+            <strong>Процедура и контракт</strong>
+            <p>Сопровождаем заявку, разъяснения, торги, подписание и контроль обязательств.</p>
+          </div>
+          <div class="control-lane">
+            <span>04</span>
+            <strong>Поставка и закрытие</strong>
+            <p>Координируем отгрузку, монтаж или обучение, приёмку, закрывающие документы и спорные вопросы.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="control-board__side" aria-label="Операционные показатели">
+        <div><span>Фокус</span><strong>одна точка ответственности</strong></div>
+        <div><span>Риски</span><strong>документы, сроки, соответствие</strong></div>
+        <div><span>Результат</span><strong>контракт закрыт без потери контроля</strong></div>
+      </aside>
     </div>
   </div>
 </section>
@@ -354,19 +428,34 @@
       <h2 class="section__title">Кейсы до 10 млн рублей</h2>
       <p class="section__lead">Короткие примеры задач, где важны точная спецификация, документы, сроки и контролируемая приёмка.</p>
     </div>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <h4 class="tech-card__title">Поставка медизделий для регионального медучреждения по 44-ФЗ</h4>
-        <p class="tech-card__text">НМЦК — 8,7 млн руб. Закрыли подбор, проверку документов, участие в процедуре и поставку партии медизделий с расходными материалами. За счёт точной спецификации сократили цикл закупки примерно на 20% и прошли приёмку без замечаний.</p>
-      </div>
-      <div class="tech-card">
-        <h4 class="tech-card__title">Архитектурные плёнки для объекта образования по 223-ФЗ</h4>
-        <p class="tech-card__text">Бюджет проекта — 6,4 млн руб. Организовали поставку и монтаж защитных и солнцезащитных плёнок с согласованием требований объекта и графика работ. Проект завершён без споров по срокам и объёму.</p>
-      </div>
-      <div class="tech-card">
-        <h4 class="tech-card__title">Оборудование и расходные материалы для крупного заказчика по 44-ФЗ</h4>
-        <p class="tech-card__text">Бюджет — 9,9 млн руб. Закрыли комплектную поставку: основное оборудование, расходные материалы, документацию и сопровождение до приёмки. Объединение позиций снизило нагрузку на заказчика и сократило срок исполнения примерно на 15%.</p>
-      </div>
+    <div class="case-grid">
+      <article class="case-card">
+        <div class="case-card__top"><span>44-ФЗ</span><strong>8,7 млн ₽</strong></div>
+        <h4>Медизделия для регионального медучреждения</h4>
+        <dl class="case-card__meta">
+          <div><dt>Задача</dt><dd>подбор партии медизделий и расходных материалов</dd></div>
+          <div><dt>Риск</dt><dd>точная спецификация и комплект подтверждений</dd></div>
+          <div><dt>Результат</dt><dd>цикл закупки сокращён примерно на 20%, приёмка без замечаний</dd></div>
+        </dl>
+      </article>
+      <article class="case-card">
+        <div class="case-card__top"><span>223-ФЗ</span><strong>6,4 млн ₽</strong></div>
+        <h4>Архитектурные плёнки для объекта образования</h4>
+        <dl class="case-card__meta">
+          <div><dt>Задача</dt><dd>поставка и монтаж защитных и солнцезащитных плёнок</dd></div>
+          <div><dt>Риск</dt><dd>согласование требований объекта и графика работ</dd></div>
+          <div><dt>Результат</dt><dd>проект завершён без споров по срокам и объёму</dd></div>
+        </dl>
+      </article>
+      <article class="case-card">
+        <div class="case-card__top"><span>44-ФЗ</span><strong>9,9 млн ₽</strong></div>
+        <h4>Оборудование и расходные материалы</h4>
+        <dl class="case-card__meta">
+          <div><dt>Задача</dt><dd>комплектная поставка оборудования, расходников и документации</dd></div>
+          <div><dt>Риск</dt><dd>объединение позиций и сопровождение до приёмки</dd></div>
+          <div><dt>Результат</dt><dd>нагрузка на заказчика снижена, срок исполнения сокращён примерно на 15%</dd></div>
+        </dl>
+      </article>
     </div>
   </div>
 </section>
