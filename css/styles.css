@@ -12,6 +12,7 @@
   --color-text: #E8ECF4;
   --color-text-2: #A8B0C4;
   --color-text-3: #6B7494;
+  --color-white: #FFFFFF;
   --color-accent: #3B82F6;
   --color-accent-2: #60A5FA;
   --color-accent-glow: rgba(59, 130, 246, 0.15);
@@ -1852,6 +1853,12 @@ img { max-width: 100%; display: block; }
 }
 
 .form__success.active { display: block; }
+
+.form__success--error {
+  color: #FCA5A5;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.24);
+}
 
 /* ============================
    АДАПТИВНОСТЬ

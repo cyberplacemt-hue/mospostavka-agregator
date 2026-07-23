@@ -42,22 +42,22 @@
 
       <div id="customer-form" style="margin-bottom: 80px;">
         <h3 class="form__title">Заявка от заказчика</h3>
-        <form class="form form__el">
+        <form class="form form__el" action="https://formsubmit.co/postavka.mos@yandex.ru" method="POST">
           <div class="form__group">
             <label class="form__label" for="c-name">Имя</label>
-            <input class="form__input" id="c-name" type="text" required placeholder="Как к вам обращаться">
+            <input class="form__input" id="c-name" name="name" type="text" required placeholder="Как к вам обращаться">
           </div>
           <div class="form__group">
             <label class="form__label" for="c-org">Организация</label>
-            <input class="form__input" id="c-org" type="text" placeholder="Название организации">
+            <input class="form__input" id="c-org" name="org" type="text" placeholder="Название организации">
           </div>
           <div class="form__group">
             <label class="form__label" for="c-contact">Email или телефон</label>
-            <input class="form__input" id="c-contact" type="text" required placeholder="email@example.ru или +7 (___) ___-__-__">
+            <input class="form__input" id="c-contact" name="contact" type="text" required placeholder="email@example.ru или +7 (___) ___-__-__">
           </div>
           <div class="form__group">
             <label class="form__label" for="c-type">Тип закупки</label>
-            <select class="form__select" id="c-type">
+            <select class="form__select" id="c-type" name="type">
               <option>44-ФЗ</option>
               <option>223-ФЗ</option>
               <option>Коммерческая</option>
@@ -66,8 +66,12 @@
           </div>
           <div class="form__group">
             <label class="form__label" for="c-msg">Что нужно поставить</label>
-            <textarea class="form__textarea" id="c-msg" placeholder="Опишите потребность — оборудование, позиции, объём, сроки"></textarea>
+            <textarea class="form__textarea" id="c-msg" name="msg" placeholder="Опишите потребность — оборудование, позиции, объём, сроки"></textarea>
           </div>
+          <input type="hidden" name="_subject" value="Заявка от заказчика — МосПоставка">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
           <button type="submit" class="btn btn--primary form__submit">Отправить заявку</button>
           <div class="form__success">Спасибо. Заявка отправлена. Мы свяжемся с вами в ближайшее время.</div>
         </form>
@@ -75,18 +79,18 @@
 
       <div id="supplier-form" style="margin-bottom: 80px;">
         <h3 class="form__title">Заявка от поставщика</h3>
-        <form class="form form__el">
+        <form class="form form__el" action="https://formsubmit.co/postavka.mos@yandex.ru" method="POST">
           <div class="form__group">
             <label class="form__label" for="s-name">Имя</label>
-            <input class="form__input" id="s-name" type="text" required placeholder="Как к вам обращаться">
+            <input class="form__input" id="s-name" name="name" type="text" required placeholder="Как к вам обращаться">
           </div>
           <div class="form__group">
             <label class="form__label" for="s-company">Компания</label>
-            <input class="form__input" id="s-company" type="text" required placeholder="Название компании">
+            <input class="form__input" id="s-company" name="company" type="text" required placeholder="Название компании">
           </div>
           <div class="form__group">
             <label class="form__label" for="s-role">Роль</label>
-            <select class="form__select" id="s-role">
+            <select class="form__select" id="s-role" name="role">
               <option>Производитель</option>
               <option>Дилер</option>
               <option>Дистрибьютор</option>
@@ -95,12 +99,16 @@
           </div>
           <div class="form__group">
             <label class="form__label" for="s-contact">Email или телефон</label>
-            <input class="form__input" id="s-contact" type="text" required placeholder="email@example.ru или +7 (___) ___-__-__">
+            <input class="form__input" id="s-contact" name="contact" type="text" required placeholder="email@example.ru или +7 (___) ___-__-__">
           </div>
           <div class="form__group">
             <label class="form__label" for="s-nomenclature">Номенклатура продукции</label>
-            <textarea class="form__textarea" id="s-nomenclature" placeholder="Какую медицинскую продукцию производите или поставляете"></textarea>
+            <textarea class="form__textarea" id="s-nomenclature" name="nomenclature" placeholder="Какую медицинскую продукцию производите или поставляете"></textarea>
           </div>
+          <input type="hidden" name="_subject" value="Заявка от поставщика — МосПоставка">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
           <button type="submit" class="btn btn--primary form__submit">Отправить заявку</button>
           <div class="form__success">Спасибо. Заявка отправлена. Мы рассмотрим её и свяжемся с вами.</div>
         </form>

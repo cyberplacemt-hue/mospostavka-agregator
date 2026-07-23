@@ -6,15 +6,20 @@
   var nav = document.getElementById('nav');
 
   if (burger && nav) {
+    burger.setAttribute('aria-controls', 'nav');
+    burger.setAttribute('aria-expanded', 'false');
+
     burger.addEventListener('click', function () {
-      burger.classList.toggle('active');
-      nav.classList.toggle('active');
+      var isActive = burger.classList.toggle('active');
+      nav.classList.toggle('active', isActive);
+      burger.setAttribute('aria-expanded', String(isActive));
     });
 
     nav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         burger.classList.remove('active');
         nav.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -53,12 +58,49 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var success = form.querySelector('.form__success');
-      if (success) {
-        form.querySelectorAll('.form__group, .form__submit').forEach(function (el) {
-          el.style.display = 'none';
-        });
-        success.classList.add('active');
+      var submit = form.querySelector('.form__submit');
+
+      if (!form.action) {
+        if (success) success.textContent = 'Форма временно недоступна. Напишите на postavka.mos@yandex.ru.';
+        if (success) success.classList.add('active');
+        return;
       }
+
+      if (success) {
+        success.classList.remove('active', 'form__success--error');
+      }
+
+      if (submit) {
+        submit.disabled = true;
+        submit.dataset.originalText = submit.textContent;
+        submit.textContent = 'Отправляем...';
+      }
+
+      fetch(form.action, {
+        method: form.method || 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('submit failed');
+          form.querySelectorAll('.form__group, .form__submit').forEach(function (el) {
+            el.style.display = 'none';
+          });
+          if (success) success.classList.add('active');
+          form.reset();
+        })
+        .catch(function () {
+          if (success) {
+            success.textContent = 'Не удалось отправить. Напишите на postavka.mos@yandex.ru или позвоните: 8 (916) 057-22-22.';
+            success.classList.add('active', 'form__success--error');
+          }
+        })
+        .finally(function () {
+          if (submit) {
+            submit.disabled = false;
+            submit.textContent = submit.dataset.originalText || 'Отправить заявку';
+          }
+        });
     });
   });
 
